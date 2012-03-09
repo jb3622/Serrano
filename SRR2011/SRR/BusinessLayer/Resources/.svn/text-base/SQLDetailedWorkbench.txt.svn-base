@@ -1,0 +1,92 @@
+SELECT
+	<item> AS ITEM,
+	<prefix>CLS AS Class,
+	<prefix>VEN As Vendor,
+	<prefix>STY As Style,
+	<prefix>CLR As Colour,
+	<prefix>SIZ As Size,
+	<prefix>IDES As Description,
+	<prefix>MKT As Market,
+	<prefix>GRD As Grade,
+	<prefix>STRGRD as GradeDescription,
+	<prefix>STR As Store,
+	<prefix>SNAM As StoreName,
+
+	CASE 
+	WHEN <prefix>STRTYP = 'C' THEN 'Online' 
+	WHEN <prefix>STRTYP = 'B' THEN 'B&M' 
+	ELSE 'Unknown' END as StoreType,
+
+	CASE
+	WHEN <prefix>WBENCH ='D' THEN 'Daily'
+	WHEN <prefix>WBENCH ='W' THEN 'Weekly'
+	ELSE 'Unknown' END As WorkBench,
+
+	<prefix>SLUL As SalesLW,
+	<prefix>SLUT As SalesTW,
+
+	Round(<prefix>CSRS, 1) As SmoothedRateOfSale,
+	Round(<prefix>SRSL, 1) AS NewSmoothedRateOfSale,
+	<prefix>SSOH As StoreSOH,
+	<prefix>OHCOV As SmoothedStoreCover,
+	<prefix>SWOC As TotalSmoothedStoreCover,
+	<prefix>CSSR As OriginalStockRequired,
+	<prefix>RINGF as RingFenced,
+	<prefix>INTA As Allocated,
+	<prefix>GIVYN as GiveItBack,
+	<prefix>INTS As Shipped,
+	<prefix>MDQT As MinDispQty,
+	<prefix>CSSR As TotalStockRequired,
+	
+	CASE WHEN <prefix>STRTYP = 'C' AND '<prefix>' IN ('IS', 'IG', 'IM', 'SS', 'SG', 'SM') THEN 0 ELSE <prefix>NSRQ END As IdealAllocQty,
+	CASE WHEN <prefix>STRTYP = 'C' AND '<prefix>' IN ('IS', 'IG', 'IM', 'SS', 'SG', 'SM') THEN 0 ELSE <prefix>PRAQ END As ProposedAllocQty,
+	CASE WHEN <prefix>STRTYP = 'C' AND '<prefix>' IN ('IS', 'IG', 'IM', 'SS', 'SG', 'SM') THEN 1 ELSE 0 END as HideQuantities,
+
+	<prefix>ESOH As DCStock,
+	<prefix>APPQT AS EDCAPPStock,
+	<prefix>EWOC As SmoothedEDCCover,
+	<prefix>NODT As NextOrderDate,
+	<prefix>NOQT As NextOrderQty,
+		
+	<prefix>PATT As CurPattern,
+	<prefix>NPAT As NewPattern,
+	<prefix>PALVL as PatternHierarchyLevel,
+	<prefix>PATL as PatternThisLevel,
+	<prefix>PATL as PatternThisLevelOriginal,
+	'U' as PatternStatus,
+
+	<prefix>CFWF As CurUpliftFactor,
+	<prefix>NFWF As NewUpliftFactor,
+	<prefix>FFLVL as UpliftHierarchyLevel,
+	<prefix>CFTL as UpliftThisLevel,
+	<prefix>CFTL as UpliftThisLevelOriginal,
+	'U' as UpliftStatus,
+
+	<prefix>CCCO As CurCutOff,
+	<prefix>NCCO As NewCutOff,
+	<prefix>CCLVL as CutOffHierarchyLevel,
+	<prefix>CCTL As CutOffThisLevel,
+	<prefix>CCTL As CutOffThisLevelOriginal,
+	'U' as CutOffStatus,
+
+	<prefix>CAFL as CurAllocFlag,
+	<prefix>NAFL as NewAllocFlag,
+	<prefix>AFLVL as AllocFlagHierarchyLevel,
+	<prefix>CATH as AllocFlagThisLevel,
+	<prefix>CATH as AllocFlagThisLevelOriginal,
+	'U' as AllocFlagStatus,
+
+	<prefix>SFCT as CurSmoothingFactor,
+	<prefix>NSMF as NewSmoothingFactor,
+	<prefix>SFLVL as SmoothingFactorHierarchyLevel,
+	<prefix>SFTH as SmoothingFactorThisLevel,
+	<prefix>SFTH as SmoothingFactorThisLevelOriginal,
+	'U' as SmoothingFactorStatus,
+
+	<prefix>STOU As DaysOutOfStock,
+	<prefix>UPC As UPC,
+	<prefix>AFLLOCK as Pack,
+	<prefix>APMST as APPItemNo
+FROM
+	<tableName>
+

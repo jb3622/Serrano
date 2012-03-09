@@ -1,0 +1,9 @@
+SELECT 
+	Promotion_Name as Id, 
+	TRIM(Description) || ' (' || TRIM(PROMOTION_NAME) || ')' As Description
+FROM 
+	DSPROMST 
+WHERE
+	ENDDAT > ((SELECT DATE(CURRENT_DATE) FROM SYSIBM/SYSDUMMY1) - 3 MONTHS)
+ORDER BY 
+	Promotion_Name

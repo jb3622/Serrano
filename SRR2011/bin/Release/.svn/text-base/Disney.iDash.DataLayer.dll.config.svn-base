@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <section name="Disney.iDash.DataLayer.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <connectionStrings>
+        <add name="Disney.iDash.DataLayer.Properties.Settings.ConnectionString"
+            connectionString="Provider=IBMDASQL.DataSource.1;Data Source=TDST.TDS.DISNEY.COM;Persist Security Info=False;Initial Catalog=TDST;Default Collection=*USRLIBL;Convert Date Time To Char=FALSE;Data Compression=True;Library List=QTEMP,TDSFILDSS2,TDSFILUKS,TDSHSTUKS,TDSDB2DSS,IPTSFILUKS,IPSAFILUKS,IPASFILUKS,IPWMFILUKS,IPTSITGUKY,IPTSITGEUY,IPTSITGDSY,IPTSQUAUKY,IPTSQUAEUY,IPTSQUADSY,IPTSMODUKY,IPTSMODEUY,IPTSMODDSY,IPTSPCH,IPTSPGM,IPTSUTL,IPSAPGM,DISCMDLIS,DISCMDLIY,TDSWWFILY;Naming Convention=1;Block Size=6000"
+            providerName="System.Data.OleDb" />
+    </connectionStrings>
+    <applicationSettings>
+        <Disney.iDash.DataLayer.Properties.Settings>
+            <setting name="CommandTimeout" serializeAs="String">
+                <value>300</value>
+            </setting>
+            <setting name="LogSQL" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="DefaultWrapper" serializeAs="String">
+                <value>DSIPWRAP</value>
+            </setting>
+            <setting name="DefaultJobQueue" serializeAs="String">
+                <value>QGPL/QTXTSRCH</value>
+            </setting>
+        </Disney.iDash.DataLayer.Properties.Settings>
+    </applicationSettings>
+</configuration>

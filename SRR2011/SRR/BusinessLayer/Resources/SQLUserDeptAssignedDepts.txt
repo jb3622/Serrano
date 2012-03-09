@@ -1,0 +1,11 @@
+SELECT
+	d.DDPT as Id,
+	RTRIM(d.DNAM) || ' (' || d.DDPT || ')' as Department
+FROM
+	DSUSRDA ud
+	JOIN IPDEPTS d
+	ON d.DDPT = ud.USDEPT
+WHERE
+	<whereClause>	
+ORDER BY
+	d.DNAM

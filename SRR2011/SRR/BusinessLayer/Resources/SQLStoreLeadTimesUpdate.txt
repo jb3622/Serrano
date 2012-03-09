@@ -1,0 +1,1 @@
+UPDATE DSSTORE SET DLEADT = <leadTime> WHERE DSTR = <storeId>

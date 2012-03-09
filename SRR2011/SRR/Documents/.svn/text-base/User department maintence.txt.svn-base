@@ -1,0 +1,25 @@
+IP Users assigned to specified department
+SELECT 
+	u.UUID,
+	u.UNAM
+FROM
+	DSUSRDA d
+		JOIN IPUSERS u
+		ON d.USIPPR =U.UUID
+WHERE
+	d.USDEPT=12
+ORDER BY
+	u.UNAM;
+
+IP Users not assigned to specifed department
+
+SELECT
+	u.UUID,
+	u.UNAM
+FROM
+	IPUSERS u
+WHERE
+	u.UUID NOT IN (SELECT USIPPR FROM DSUSRDA WHERE USDEPT=12)
+ORDER BY
+	u.UNAM	
+	

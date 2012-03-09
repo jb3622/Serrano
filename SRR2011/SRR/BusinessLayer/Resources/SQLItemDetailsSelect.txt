@@ -1,0 +1,34 @@
+SELECT
+	m.SRCLS As Class,
+	m.SRVEN As Vendor,
+	m.SRSTY As Style,
+	m.SRCLR As Colour,
+	m.SRSIZ As Size,
+	i.IDES As Description,
+	m.SRUPC as UPC,
+	m.SRSTR As Store,
+	s.SNAM As StoreName,
+	m.SRSTRTYP as StoreType,
+	m.SROROS As OpeningRateOfSale,
+	h.DMDQT as MinDispQty,
+	m.SRDEPT As Department,
+	m.SRFFCT As UpliftFactor,
+	m.SRCCO As CoverCutOff,
+	m.SRAFLG As AllocationFlag,
+	m.SRSFCT As SmoothingFactor,
+	repeat(' ', 128) as Error,
+	0 AS DeleteFlag
+FROM
+	DSSRDTL m
+	JOIN DSITHDR h
+	ON m.SRCLS = h.DICLS
+	AND m.SRVEN = h.DIVEN
+	AND m.SRSTY = h.DISTY
+	AND m.SRCLR = h.DICLR
+	AND m.SRSIZ = h.DISIZ
+
+	JOIN IPSTORE s
+	ON s.SSTR = m.SRSTR
+
+	JOIN IPITHDR i
+	ON i.IUPD = m.SRUPC

@@ -1,0 +1,28 @@
+SELECT
+	SDSTR As Store,
+	SDSNAM As StoreName,
+	CASE 
+	WHEN SDWBENCH = 'D' THEN 'Daily'
+	WHEN SDWBENCH = 'W' THEN 'Weekly'
+	END AS Workbench,
+	CASE 
+	WHEN SDSTRTYP = 'C' THEN 'Online'
+	WHEN SDSTRTYP = 'B' THEN 'B&M'
+	END As StoreType,
+	SDMKT As Market,
+	SDSLUL As SalesLW,
+	SDSLUT As SalesTW,
+	SDCSRS As CurrentROS,
+	SDSSOH As StockonHand,
+	SDSWOC As Smoothedstorecover,
+	SDINTA As Allocated,
+	SDINTS As Shipped,
+	SDCSSR As Totalstockrequired,
+	SDNSRQ As IdealAllocQty,
+	SDPRAQ As ProposedAllocQty,
+	SDSTOU As Outofstock
+FROM
+	DSSRWBSD1
+WHERE
+	SDSSOH <> 0
+	AND SDSWOC > 0

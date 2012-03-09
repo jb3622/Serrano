@@ -1,0 +1,13 @@
+SELECT 
+	a.GDSTR AS StoreID, 
+	b.SNAM as StoreName,
+	GDCHGU as ChangedBy,
+	GDCHGD as ChangedDateTime
+FROM 
+	DSSRSGR a
+	JOIN IPSTORE b
+	ON a.GDSTR = b.SSTR
+WHERE 
+	GDDEPT=<deptId> AND GDGRADE='<gradeId>'
+ORDER BY  
+	a.GDSTR

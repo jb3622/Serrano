@@ -1,0 +1,13 @@
+INSERT INTO
+	DSAPPALC 
+	(IASTS, IAORIGIN, IADEPT, IACLS,
+	 IAVEN, IASTY, IACLR, IASIZ, 
+	 IAUPC, IASTR, IASTRDSC, IAMKT, 
+	 IAGRADE, IASYSQTY, IARLSQTY, IARLSYN, 
+	 IASRRUNT, IARLSDAT, IARLSUSR)
+VALUES 
+	('', 'M', <departmentId>, <class>, 
+	<vendor>, <style>, <colour>, <size>, 
+	'<upc>', <store>, '<storeName>', '<market>', 
+	'<storeGrade>', 0, <releaseQty>, 'Y', 
+	0, '<dateTime>', '<userName>')

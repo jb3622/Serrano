@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Disney.iDash.SRR.BusinessLayer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LocalConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=C:\Projects\iDash\DataLayer\Local.sdf&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=C:\Projects\iDash\DataLayer\Local.sdf</Value>
+    </Setting>
+    <Setting Name="ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=IBMDA400.DataSource.1;Data Source=TDST.TDS.DISNEY.COM;Persist Security Info=True;Password=ch1cken;User ID=MLEVINE;Initial Catalog=TDST;Convert Date Time To Char=false;Library List=QTEMP,TDSFILDSS2,TDSFILUKS,TDSHSTUKS,TDSDB2DSS,IPTSFILUKS,IPSAFILUKS,IPASFILUKS,IPWMFILUKS,IPTSITGUKY,IPTSITGEUY,IPTSITGDSY,IPTSQUAUKY,IPTSQUAEUY,IPTSQUADSY,IPTSMODUKY,IPTSMODEUY,IPTSMODDSY,IPTSPCH,IPTSPGM,IPTSUTL,IPSAPGM,DISCMDLIS,DISCMDLIY,TDSWWFILY;Naming Convention=1&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=IBMDA400.DataSource.1;Data Source=TDST.TDS.DISNEY.COM;Persist Security Info=True;Password=ch1cken;User ID=MLEVINE;Initial Catalog=TDST;Convert Date Time To Char=false;Library List=QTEMP,TDSFILDSS2,TDSFILUKS,TDSHSTUKS,TDSDB2DSS,IPTSFILUKS,IPSAFILUKS,IPASFILUKS,IPWMFILUKS,IPTSITGUKY,IPTSITGEUY,IPTSITGDSY,IPTSQUAUKY,IPTSQUAEUY,IPTSQUADSY,IPTSMODUKY,IPTSMODEUY,IPTSMODDSY,IPTSPCH,IPTSPGM,IPTSUTL,IPSAPGM,DISCMDLIS,DISCMDLIY,TDSWWFILY;Naming Convention=1</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

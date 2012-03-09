@@ -1,0 +1,30 @@
+SELECT
+	ds.DIDPT As Department,
+	ds.DICLS As Class,
+	ds.DIVEN As Vendor,
+	ds.DISTY As Style,
+	ds.DICLR As Colour,
+	ds.DISIZ As Size,
+	ip.IUPD As UPC,
+	ip.IDES As Description,
+	ip.IMLT As MinDistLot,
+	ds.DMDQT as MinDispQty
+
+FROM
+	DSITHDR ds
+	JOIN IPITHDR ip
+	ON ds.DICLS = ip.ICLS
+	AND ds.DIVEN = ip.IVEN
+	AND ds.DISTY = ip.ISTY
+	AND ds.DICLR = ip.ICLR
+	AND ds.DISIZ = ip.ISIZ
+
+<whereClause>
+
+ORDER BY
+	ds.DIDPT,
+	ds.DICLS,
+	ds.DIVEN,
+	ds.DISTY,
+	ds.DICLR,
+	ds.DISIZ

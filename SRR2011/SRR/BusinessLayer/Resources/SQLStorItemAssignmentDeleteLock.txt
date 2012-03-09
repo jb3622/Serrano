@@ -1,0 +1,11 @@
+DELETE FROM
+    DSSRLCK
+WHERE
+    LOUSR = '<username>'
+AND
+    LODEPT = <dept>
+AND
+    LOMBR = 'ISA'
+AND 
+    LOGUID = '<guid>'
+

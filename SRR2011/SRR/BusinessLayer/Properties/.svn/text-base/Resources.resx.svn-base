@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="SQLDetailedWorkbench" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqldetailedworkbench.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLPackItemCheck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqlpackitemcheck.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLPackItemUnlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqlpackitemunlock.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLPackItemValidate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqlpackitemvalidate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLPackItemGetAllocations" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLPackItemGetAllocations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLPackItemUpdateAllocations" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLPackItemUpdateAllocations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLPackItemGetPackDetails" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqlpackitemgetpackdetails.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLPackItemGetStowawayAllocations" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLPackItemGetStowawayAllocations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLSummaryWorkbench" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLSummaryWorkbench.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLUserDeptAssignedDepts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqluserdeptassigneddepts.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLUserDeptAvailableDepts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLUserDeptAvailableDepts.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLStoreLeadTimesSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLStoreLeadTimesSelect.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLStoreLeadTimesUpdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLStoreLeadTimesUpdate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLStockInfoSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLStockInfoSelect.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLItemDetailsSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLItemDetailsSelect.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLDepartmentsSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLDepartmentsSelect.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLDeptGradeStoresSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLDeptGradeStoresSelect.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLSystemMessagesSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLSystemMessagesSelect.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLSummaryWorkbenchAliasCreate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLSummaryWorkbenchAliasCreate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLSummaryWorkbenchAliasDrop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLSummaryWorkbenchAliasDrop.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLStoreDeleteScheduleSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqlstoredeletescheduleselect.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLPackItemDeleteAllocations" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLPackItemDeleteAllocations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLStoreDeleteScheduleDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLStoreDeleteScheduleDelete.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupDepartments" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqllookupdepartments.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupEventCodes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqllookupeventcodes.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupFranchises" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqllookupfranchises.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupIPUsers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqllookupipusers.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupItemClass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqllookupitemclass.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupItemVendors" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqllookupitemvendors.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupMarkets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqllookupmarkets.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupPatterns" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqllookuppatterns.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupProducts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqllookupproducts.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupPromotions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqllookuppromotions.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupStoreGrades" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqllookupstoregrades.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupStoreGroups" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqllookupstoregroups.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupStores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqllookupstores.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLSummaryWorkbenchDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLSummaryWorkbenchDelete.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLLookupStowawayStores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLLookupStowawayStores.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLFocusGroupsSelectClasses" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqlfocusgroupsselectclasses.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLFocusGroupsSelectStores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqlfocusgroupsselectstores.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLStoreGroupsSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLStoreGroupsSelect.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLStoreGradeUpdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SQLStoreGradeUpdate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+</root>

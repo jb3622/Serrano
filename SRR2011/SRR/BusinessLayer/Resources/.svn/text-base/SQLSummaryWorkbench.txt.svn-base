@@ -1,0 +1,64 @@
+SELECT
+SWKEY   as HierarchyKey,
+SWDEPT  as Department,
+SWCLS   as Class,
+SWMKT   as Market,
+SWMKTC  as MarketColour,
+IFNULL(CSCSEQ, '0') as MarketSequence,
+SWGRD   as Grade,
+SWGRDN  as GradeDescription,
+SWSTR   as Store,
+SWSTRN  as StoreName,
+SWKYVL  as KeyValue,
+
+	CASE 
+	WHEN SWSTRTYP = 'C' THEN 'Online' 
+	WHEN SWSTRTYP = 'B' THEN 'B&M' 
+	ELSE 'Unknown' END as StoreType,
+
+	CASE
+	WHEN SWWBTYP ='D' THEN 'Daily'
+	WHEN SWWBTYP ='W' THEN 'Weekly'
+	ELSE 'Unknown' END As WorkBench,
+
+ 
+SWFFCT  as UpliftFactor,
+SWFFCTI as UpliftInheritedLevel,
+SWFFCTA as UpliftActualFlag,
+SWFFCTO as UpliftOverrideLevel,
+SWFFCTS as UpliftStatus,
+
+SWCCO  as CutOff,
+SWCCOI as CutOffInheritedLevel,
+SWCCOA as CutOffActualFlag,
+SWCCOO as CutOffOverrideLevel,
+SWCCOS as CutOffStatus,
+
+SWAFLG  as Allocation,
+SWAFLGI as AllocationInheritedLevel,
+SWAFLGA as AllocationActualFlag,
+SWAFLGO as AllocationOverrideLevel,
+SWAFLGS as AllocationStatus,
+
+SWSFCT  as SmoothFactor,
+SWSFCTI as SmoothFactorInheritedLevel,
+SWSFCTA as SmoothFactorActualFlag,
+SWSFCTO as SmoothFactorOverrideLevel,
+SWSFCTS as SmoothFactorStatus,
+
+SWPATT  as Pattern,
+SWPATTI as PatternInheritedLevel,
+SWPATTA as PatternActualFlag,
+SWPATTO as PatternOverrideLevel,
+SWPATTS as PatternStatus,
+
+SWSTRQ as StockRequirement,
+SWRPQT as IdealReplenishmentQuantity,
+SWPRAQ as ProposedAllocationQuantity,
+
+SWCHGD as Changed
+
+FROM
+	DSSRSWB<member> SWB
+LEFT OUTER JOIN DSCNTAP ON DSCNTAP.CSCODE = SWB.SWMKT
+WHERE SWDEPT = <departmentId>

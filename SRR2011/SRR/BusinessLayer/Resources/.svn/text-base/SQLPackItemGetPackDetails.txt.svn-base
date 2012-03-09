@@ -1,0 +1,26 @@
+SELECT
+	RIGHT('0000' || s.KCCL, 4) || '-' || RIGHT('00000' || s.KCVN, 5) || '-' || RIGHT('0000' || s.KCST, 4) || '-' || RIGHT('000' || s.KCCR, 3) || '-' || RIGHT('0000' || s.KCSZ, 4) AS ITEM,
+	s.KQTY AS UNITS,
+	h.IUPD AS UPC,
+	h.IDES AS Description,
+	h.IDPT As Department,
+	s.KCCL As Class,
+	s.KCVN As Vendor,
+	s.KCST as Style,
+	s.KCCR as Colour,
+	s.KCSZ as Size
+FROM
+	IPISETS s
+		JOIN IPITHDR h
+			ON h.ICLS = s.KCCL
+			AND h.IVEN = s.KCVN
+			AND h.ISTY = s.KCST
+			AND h.ICLR = s.KCCR
+			AND h.ISIZ = s.KCSZ
+
+WHERE
+	s.KCLS=<class>
+	AND s.KVEN=<vendor>
+	AND s.KSTY=<style>
+	AND s.KCLR =<colour>
+	AND s.KSIZ=<size>

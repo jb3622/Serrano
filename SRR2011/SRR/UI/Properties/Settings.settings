@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Disney.iDash.SRR.UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EditableColumnBackcolor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">LightYellow</Value>
+    </Setting>
+    <Setting Name="OddRowBackColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="EvenRowBackColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">LightCyan</Value>
+    </Setting>
+    <Setting Name="ChangedCellForeColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="InheritedCellForeColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">Blue</Value>
+    </Setting>
+    <Setting Name="FocusedRowBackColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">LimeGreen</Value>
+    </Setting>
+    <Setting Name="SelectedRowBackColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="SelectedRowForeColor" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

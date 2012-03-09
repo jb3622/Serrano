@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/idash/!svn/ver/973/Visual%20Studio%202010/iDash/branches/devintegration/Shared
+END
+AssemblyInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/Shared/AssemblyInfo.cs
+END
+ExceptionHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/Shared/ExceptionHandler.cs
+END
+EncryptData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/Shared/EncryptData.cs
+END
+Shared.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/Shared/Shared.csproj.user
+END
+CellHighlighter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/Shared/CellHighlighter.cs
+END
+app.config
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/Shared/app.config
+END
+ControlState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/Shared/ControlState.cs
+END
+ExcelUtils.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/Shared/ExcelUtils.cs
+END
+Shared.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/Shared/Shared.csproj
+END
+LanguageExtensions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/Shared/LanguageExtensions.cs
+END
+StaticClasses.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/Shared/StaticClasses.cs
+END
+SingleInstance.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/Shared/SingleInstance.cs
+END
+DevExpressUtils.cs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/Shared/DevExpressUtils.cs
+END

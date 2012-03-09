@@ -1,0 +1,7 @@
+INSERT INTO 
+    DSSRLCK (LOKEY,LODEPT,LOCLS,LOVEN,LOSTY,LOSTR,LOUSR,LOMBR,LOTYP,LOMOD,LOGUID)
+VALUES
+    (16,<dept>,0,0,0,0,'<username>','ISA','','A',
+	'<guid>')
+
+

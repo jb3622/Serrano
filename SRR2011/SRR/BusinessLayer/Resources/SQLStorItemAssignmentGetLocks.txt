@@ -1,0 +1,9 @@
+SELECT 
+	LODEPT as DeptId,
+	LOUSR AS UserName,
+	LOGUID AS LockId
+FROM
+	DSSRLCK
+WHERE 
+	LODEPT = <dept>
+AND LOMBR='ISA'

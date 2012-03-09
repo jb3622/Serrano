@@ -1,0 +1,8 @@
+SELECT
+	IUPD as Id,
+	TRIM(IDES) || ' (' || TRIM(IUPD) || ')' as Description
+
+FROM
+	IPITHDRC
+ORDER BY
+	IDES

@@ -1,0 +1,12 @@
+SELECT
+	i.CCLS as Id,
+	i.CLNM as Description
+FROM
+	IPCLASS i
+		JOIN DSCLASS d
+		ON i.CCLS = d.CCLS
+WHERE
+	d.CCODE='Y'
+	AND <whereClause>
+ORDER BY
+	i.CCLS

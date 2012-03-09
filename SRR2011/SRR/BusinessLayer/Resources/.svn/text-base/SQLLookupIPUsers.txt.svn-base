@@ -1,0 +1,7 @@
+SELECT
+	UUID As Id,
+	Trim(UNAM) || ' (' || Trim(UUID) || ')'  As Username
+FROM
+	IPUSERS
+ORDER BY
+	UNAM

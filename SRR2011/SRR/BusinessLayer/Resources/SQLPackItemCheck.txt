@@ -1,0 +1,10 @@
+SELECT
+	IAJOB As LockedBy
+FROM
+	DSIALOK
+WHERE
+	IACLS = <class>
+	AND IAVEN = <vendor>
+	AND IASTY = <style>
+	AND IACLR = <colour>
+	AND IASIZ = <size>

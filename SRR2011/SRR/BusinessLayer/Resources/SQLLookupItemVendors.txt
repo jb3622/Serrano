@@ -1,0 +1,9 @@
+SELECT DISTINCT
+	VENID As Id,
+	VENNAM As Description
+FROM
+	DSSPVENP
+WHERE 
+	<whereClause>
+ORDER BY
+	VENID

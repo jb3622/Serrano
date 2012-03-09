@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA964288-7E8C-47F0-969A-087159607E00}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Disney.iDash.SRR.BusinessLayer</RootNamespace>
+    <AssemblyName>Disney.iDash.SRR.BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Deployment|AnyCPU'">
+    <OutputPath>bin\Deployment\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug32|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\bin\Debug\Disney.iDash.BusinessLayer.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\bin\Debug\Disney.iDash.BusinessLayer.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\bin\Release\Disney.iDash.BusinessLayer.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Deployment|x86'">
+    <OutputPath>bin\x86\Deployment\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Deployment\Disney.iDash.BusinessLayer.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug32|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\bin\Debug32\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\bin\Debug\Disney.iDash.BusinessLayer.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessBase.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="StoreGroupsCollection.cs" />
+    <Compile Include="StowawayStoresInfo.cs" />
+    <Compile Include="GiveItBack.cs" />
+    <Compile Include="SummaryItem.cs" />
+    <Compile Include="SummaryWorkbenchInfo.cs" />
+    <Compile Include="LookupSource.cs" />
+    <Compile Include="SRRDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SRRDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StockInfo.cs" />
+    <Compile Include="StoreInfo.cs" />
+    <Compile Include="SysInfo.cs" />
+    <Compile Include="SystemLock.cs" />
+    <Compile Include="SysInfoMessage.cs" />
+    <Compile Include="UserDeptInfo.cs" />
+    <Compile Include="WorkbenchManualInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="StockItem.cs" />
+    <Compile Include="DetailedWorkbenchInfo.cs" />
+    <Compile Include="WorkbenchExtract.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataLayer\DataLayer.csproj">
+      <Project>{7A1584F6-B262-40DF-8B18-58E74E473D06}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LocalData\LocalData.csproj">
+      <Project>{59367AE4-188D-460E-8BF4-26E5E776E55F}</Project>
+      <Name>LocalData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Shared.csproj">
+      <Project>{260671E1-F31F-4D6B-8D34-DD26C9095686}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\SQLLookupDepartments.txt" />
+    <None Include="SRRDataSet.xsc">
+      <DependentUpon>SRRDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SRRDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SRRDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SRRDataSet.xss">
+      <DependentUpon>SRRDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLLookupEventCodes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLLookupFranchises.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLLookupPromotions.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLLookupStores.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLLookupStoreGrades.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLLookupMarkets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLLookupStoreGroups.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLLookupProducts.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLLookupItemClass.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLLookupItemVendors.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLLookupPatterns.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLDetailedWorkbench.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLFocusGroupsSelectStores.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLFocusGroupsSelectClasses.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLPackItemValidate.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLPackItemUnlock.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLPackItemCheck.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLPackItemGetPackDetails.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLPackItemGetAllocations.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLPackItemUpdateAllocations.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLPackItemGetStowawayAllocations.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLLookupIPUsers.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLUserDeptAssignedDepts.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLUserDeptAvailableDepts.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLStoreLeadTimesSelect.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLStoreLeadTimesUpdate.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLStockInfoSelect.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLItemDetailsSelect.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLDepartmentsSelect.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLSummaryWorkbench.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLDeptGradeStoresSelect.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLSystemMessagesSelect.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLSummaryWorkbenchAliasCreate.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLSummaryWorkbenchAliasDrop.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLStoreDeleteScheduleSelect.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLPackItemDeleteAllocations.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLStoreDeleteScheduleDelete.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLSummaryWorkbenchDelete.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLLookupStowawayStores.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLStoreGroupsSelect.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLStoreGradeUpdate.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

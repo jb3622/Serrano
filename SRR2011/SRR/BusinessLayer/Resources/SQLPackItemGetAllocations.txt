@@ -1,0 +1,40 @@
+SELECT DISTINCT
+	s.SGMKT As Market,
+	s.SGSTR As Store,
+	s.SGSNAM as StoreName,
+	s.SGGRD as StoreGrade,
+	0 As ReleaseQty,
+	CASE WHEN i.IAUPC IS NULL THEN 0 ELSE 1 END as Allocated,
+	CASE WHEN z.IAUPC IS NULL THEN 0 ELSE 1 END as Locked
+FROM 
+	DSSRMSG s
+	LEFT JOIN DSAPPALC i
+		ON i.IADEPT=s.SGDEPT
+		AND i.IASTR=s.SGSTR 
+		AND i.IASTS = 'P' 
+		AND i.IAORIGIN='S' 
+		AND i.IACLS = <class>
+		AND i.IAVEN= <vendor>
+		AND i.IASTY= <style>
+		AND i.IACLR= <colour>
+		AND i.IASIZ= <size>
+
+	LEFT JOIN DSAPPALC z
+		ON z.IADEPT=s.SGDEPT
+		AND z.IASTR=s.SGSTR 
+		AND z.IASTS = '' 
+		AND z.IAORIGIN='S' 
+		AND z.IACLS = <class>
+		AND z.IAVEN= <vendor>
+		AND z.IASTY= <style>
+		AND z.IACLR= <colour>
+		AND z.IASIZ= <size>
+WHERE
+	S.SGDEPT = (SELECT DISTINCT IDPT FROM IPITHDR WHERE ICLS = <class>
+		AND IVEN= <vendor> 
+		AND ISTY= <style>
+		AND ICLR= <colour>
+		AND ISIZ= <size>)
+ORDER BY
+	s.SGMKT,
+	s.SGSTR

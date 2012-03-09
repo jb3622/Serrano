@@ -1,0 +1,9 @@
+SELECT
+	d.DDPT as Id,
+	RTRIM(d.DNAM) || ' (' || d.DDPT || ')' as Department
+FROM
+	IPDEPTS d
+WHERE
+	d.DDPT NOT IN (SELECT USDEPT FROM DSUSRDA WHERE <whereClause>)
+ORDER BY
+	d.DNAM

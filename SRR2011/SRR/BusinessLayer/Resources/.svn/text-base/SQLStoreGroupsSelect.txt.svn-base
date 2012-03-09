@@ -1,0 +1,14 @@
+SELECT
+	SUBSTRING(m.SKEY, 2) as Id,
+	m.SNAM AS Description,
+	s.SGPCHU as ChangedBy,
+	s.SGPCHD as ChangedDate,
+	CASE WHEN s.SGPID IS NULL THEN 0 ELSE 1 END As Selected
+FROM
+	IPSTRTB m
+	LEFT JOIN DSSRSGP s
+		ON SUBSTRING(m.SKEY, 2) = s.SGPID
+WHERE
+	m.SKEY LIKE 'U%'
+ORDER BY
+	m.SKEY

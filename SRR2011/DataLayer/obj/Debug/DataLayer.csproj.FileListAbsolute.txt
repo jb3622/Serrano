@@ -1,0 +1,9 @@
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\bin\Debug\Disney.iDash.DataLayer.dll.config
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\bin\Debug\Disney.iDash.DataLayer.dll
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\bin\Debug\Disney.iDash.DataLayer.pdb
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\DataLayer\obj\Debug\Disney.iDash.DataLayer.Properties.Resources.resources
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\DataLayer\obj\Debug\GenerateResource.read.1.tlog
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\DataLayer\obj\Debug\GenerateResource.write.1.tlog
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\DataLayer\obj\Debug\Disney.iDash.DataLayer.dll
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\DataLayer\obj\Debug\Disney.iDash.DataLayer.pdb

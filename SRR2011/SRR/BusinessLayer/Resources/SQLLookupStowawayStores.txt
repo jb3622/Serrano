@@ -1,0 +1,11 @@
+SELECT DISTINCT
+	s.SGSTR as Id,
+	TRIM(s.SGSNAM) || ' (' || s.SGSTR || ')' As Description
+FROM
+	DSSRMSG3 s,
+	IPSTRTB sa
+WHERE 
+	sa.SKEY = 'USTW'
+	AND SUBSTRING(sa.SARR, CAST(s.SGSTR AS INTEGER), 1) = '1'
+ORDER BY
+	s.SGSTR

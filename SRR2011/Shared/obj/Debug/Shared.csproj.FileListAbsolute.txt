@@ -1,0 +1,13 @@
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\bin\Debug\Disney.iDash.Shared.dll.config
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\bin\Debug\Disney.iDash.Shared.dll
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\bin\Debug\Disney.iDash.Shared.pdb
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Debug\Disney.iDash.Shared.Controls.ListEditor.resources
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Debug\Disney.iDash.Shared.Forms.CustomDialog.resources
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Debug\Disney.iDash.Shared.Forms.ErrorDialogForm.resources
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Debug\Disney.iDash.Shared.Controls.ListMover.resources
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Debug\Disney.iDash.Shared.Properties.Resources.resources
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Debug\GenerateResource.read.1.tlog
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Debug\GenerateResource.write.1.tlog
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Debug\Disney.iDash.Shared.dll
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Debug\Disney.iDash.Shared.pdb

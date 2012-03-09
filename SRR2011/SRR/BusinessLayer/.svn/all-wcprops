@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/idash/!svn/ver/980/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer
+END
+SRRDataSet.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/SRRDataSet.Designer.cs
+END
+Constants.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/Constants.cs
+END
+SummaryItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/SummaryItem.cs
+END
+SummaryWorkbenchInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/SummaryWorkbenchInfo.cs
+END
+WorkbenchExtract.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/WorkbenchExtract.cs
+END
+app.config
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/app.config
+END
+SRRDataSet.xss
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/SRRDataSet.xss
+END
+BusinessBase.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/BusinessBase.cs
+END
+SRR.BusinessLayer.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/SRR.BusinessLayer.csproj
+END
+LookupSource.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/LookupSource.cs
+END
+DetailedWorkbenchInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/idash/!svn/ver/980/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/DetailedWorkbenchInfo.cs
+END
+StowawayStoresInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/StowawayStoresInfo.cs
+END
+SysInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/SysInfo.cs
+END
+WorkbenchManualInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/WorkbenchManualInfo.cs
+END
+SystemLock.cs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/SystemLock.cs
+END
+StockInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/idash/!svn/ver/949/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/StockInfo.cs
+END
+SysInfoMessage.cs
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/SysInfoMessage.cs
+END
+StockItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/StockItem.cs
+END
+SRRDataSet.xsc
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/SRRDataSet.xsc
+END
+SRRDataSet.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/SRRDataSet.xsd
+END
+SRR.BusinessLayer.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/SRR.BusinessLayer.csproj.user
+END
+UserDeptInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/UserDeptInfo.cs
+END
+StoreGroupsCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/StoreGroupsCollection.cs
+END
+GiveItBack.cs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/GiveItBack.cs
+END
+StoreInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/idash/!svn/ver/941/Visual%20Studio%202010/iDash/branches/devintegration/SRR/BusinessLayer/StoreInfo.cs
+END

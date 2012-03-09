@@ -1,0 +1,17 @@
+SELECT
+	ds.DCTR As CountryId,
+	c.CSDESC As Country,
+	s.SSTR As StoreId,
+	s.SNAM As StoreName,
+	ds.DLEADT as LeadTime
+
+FROM
+	IPSTORE s
+	JOIN DSSTORE ds
+	ON s.SSTR = ds.DSTR
+
+	JOIN DSCNTAP c
+	ON ds.DCTR = c.CSCODE
+
+WHERE
+	s.SSTS IN ('S', 'F')

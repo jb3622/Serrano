@@ -1,0 +1,7 @@
+SELECT
+	CSCODE as ID,
+	TRIM(CSDESC) || ' (' || TRIM(CSCODE) || ')' As Description
+FROM
+	DSCNTAP
+ORDER BY
+	CSCSEQ

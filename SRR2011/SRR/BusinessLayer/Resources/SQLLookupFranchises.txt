@@ -1,0 +1,1 @@
+SELECT 	FMCode as Id,	TRIM(FMDesc) || ' (' || Trim(FMCode) || ')' as DescriptionFROM 	DSFAMLY ORDER BY 	FMCode

@@ -1,0 +1,8 @@
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\bin\Debug\Disney.iDash.BaseClasses.dll
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\bin\Debug\Disney.iDash.BaseClasses.pdb
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\BaseClasses\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\BaseClasses\obj\Debug\Disney.iDash.BaseClasses.Forms.AddinMenu.resources
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\BaseClasses\obj\Debug\GenerateResource.read.1.tlog
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\BaseClasses\obj\Debug\GenerateResource.write.1.tlog
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\BaseClasses\obj\Debug\Disney.iDash.BaseClasses.dll
+C:\Dev\Visual Studio 2010\iDash\branches\devintegration\BaseClasses\obj\Debug\Disney.iDash.BaseClasses.pdb

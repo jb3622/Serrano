@@ -1,0 +1,6 @@
+DELETE FROM 
+	DSAPPALC 
+WHERE 
+	IAUPC = '<upc>'
+	AND IARLSUSR = '<userName>' 
+	AND IASTS=''

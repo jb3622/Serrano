@@ -1,0 +1,7 @@
+SELECT
+	SGPID as Id,
+	TRIM(SGPNAM) || ' (' || TRIM(SGPID) || ')' AS Description
+FROM
+	DSSRSGP 
+ORDER BY
+	1

@@ -1,0 +1,11 @@
+SELECT DISTINCT
+	a.USDept as Id, 
+	a.USDept || ' - ' || d.DNAM as Description
+FROM
+	DSUSRDA a
+		LEFT JOIN IPDEPTS d
+		ON d.DDPT = a.USDEPT
+WHERE
+	<whereClause>
+ORDER BY 
+	a.USDept

@@ -1,0 +1,1 @@
+SELECT	SDLSTS as Status,	SDLSTR as StoreId,	SDLDDAT as ScheduleDate,	SDLUSR as NetworkId,	SDLRDAT as LastUpdated,	0 As DELETEFLAG,	SDLSTR as OldStoreIdFROM	DSSRSTD1WHERE 	SDLSTS IN (<statusList>)ORDER BY	SDLSTS,	SDLDDAT

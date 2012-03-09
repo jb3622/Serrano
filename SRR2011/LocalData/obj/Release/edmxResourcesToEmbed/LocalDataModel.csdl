@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LocalDataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="LocalDataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="eApplications" EntityType="LocalDataModel.eApplication" />
+    <EntitySet Name="eEnvironments" EntityType="LocalDataModel.eEnvironment" />
+    <EntitySet Name="eMenuOptions" EntityType="LocalDataModel.eMenuOption" />
+    <EntitySet Name="eUsers" EntityType="LocalDataModel.eUser" />
+    <AssociationSet Name="Applications_MenuOptions" Association="LocalDataModel.Applications_MenuOptions">
+      <End Role="Application" EntitySet="eApplications" />
+      <End Role="MenuOption" EntitySet="eMenuOptions" />
+    </AssociationSet>
+    <AssociationSet Name="UserApplications" Association="LocalDataModel.UserApplications">
+      <End Role="Application" EntitySet="eApplications" />
+      <End Role="User" EntitySet="eUsers" />
+    </AssociationSet>
+    <AssociationSet Name="UserEnvironments" Association="LocalDataModel.UserEnvironments">
+      <End Role="Environment" EntitySet="eEnvironments" />
+      <End Role="User" EntitySet="eUsers" />
+    </AssociationSet>
+    <AssociationSet Name="UserMenuOptions" Association="LocalDataModel.UserMenuOptions">
+      <End Role="MenuOption" EntitySet="eMenuOptions" />
+      <End Role="User" EntitySet="eUsers" />
+    </AssociationSet>
+    <EntitySet Name="Settings" EntityType="LocalDataModel.Setting" />
+  </EntityContainer>
+  <EntityType Name="eApplication">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ApplicationName" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Active" DefaultValue="True" />
+    <NavigationProperty Name="vMenuOptions" Relationship="LocalDataModel.Applications_MenuOptions" FromRole="Application" ToRole="MenuOption" />
+    <NavigationProperty Name="vUsers" Relationship="LocalDataModel.UserApplications" FromRole="Application" ToRole="User" />
+  </EntityType>
+  <EntityType Name="eEnvironment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EnvironmentName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Hostname" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Domain" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Database" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Type" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Active" />
+    <Property Type="String" Name="LibraryList" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="eUsers" Relationship="LocalDataModel.UserEnvironments" FromRole="Environment" ToRole="User" />
+  </EntityType>
+  <EntityType Name="eMenuOption">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ApplicationId" Nullable="false" />
+    <Property Type="String" Name="Tab" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MenuOption" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="vApplication" Relationship="LocalDataModel.Applications_MenuOptions" FromRole="MenuOption" ToRole="Application" />
+    <NavigationProperty Name="vUsers" Relationship="LocalDataModel.UserMenuOptions" FromRole="MenuOption" ToRole="User" />
+    <Property Type="Boolean" Name="IsRestricted" Nullable="false" DefaultValue="false" />
+  </EntityType>
+  <EntityType Name="eUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="NetworkId" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Firstname" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Lastname" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="eMail" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Active" DefaultValue="True" />
+    <NavigationProperty Name="vApplications" Relationship="LocalDataModel.UserApplications" FromRole="User" ToRole="Application" />
+    <NavigationProperty Name="vEnvironments" Relationship="LocalDataModel.UserEnvironments" FromRole="User" ToRole="Environment" />
+    <NavigationProperty Name="vMenuOptions" Relationship="LocalDataModel.UserMenuOptions" FromRole="User" ToRole="MenuOption" />
+    <Property Type="String" Name="Department" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Team" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="Applications_MenuOptions">
+    <End Type="LocalDataModel.eApplication" Role="Application" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="LocalDataModel.eMenuOption" Role="MenuOption" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Application">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MenuOption">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserApplications">
+    <End Type="LocalDataModel.eApplication" Role="Application" Multiplicity="*" />
+    <End Type="LocalDataModel.eUser" Role="User" Multiplicity="*" />
+  </Association>
+  <Association Name="UserEnvironments">
+    <End Type="LocalDataModel.eEnvironment" Role="Environment" Multiplicity="*" />
+    <End Type="LocalDataModel.eUser" Role="User" Multiplicity="*" />
+  </Association>
+  <Association Name="UserMenuOptions">
+    <End Type="LocalDataModel.eMenuOption" Role="MenuOption" Multiplicity="*" />
+    <End Type="LocalDataModel.eUser" Role="User" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="Version" />
+    </Key>
+    <Property Type="Double" Name="Version" Nullable="false" />
+  </EntityType>
+</Schema>

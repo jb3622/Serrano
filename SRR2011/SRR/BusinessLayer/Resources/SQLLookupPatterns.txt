@@ -1,0 +1,7 @@
+SELECT
+	PatId as Id,
+	Trim(PatNam) || ' (' || PatId || ')' As Description
+FROM
+	DSSRPAT
+ORDER BY
+	PatId

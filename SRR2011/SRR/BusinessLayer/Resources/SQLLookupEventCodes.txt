@@ -1,0 +1,9 @@
+SELECT 
+	PrCode as Id,
+	TRIM(PrDesc) || ' (' || TRIM(PrCode) || ')' as Description
+FROM 
+	DSPROMO 
+WHERE
+	PrCode <> ''
+ORDER BY 
+	PrCode

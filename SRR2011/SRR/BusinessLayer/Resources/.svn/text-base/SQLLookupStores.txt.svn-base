@@ -1,0 +1,7 @@
+SELECT DISTINCT
+	SGSTR as Id,
+	TRIM(SGSNAM) || ' (' || SGSTR || ')' As Description
+FROM
+	DSSRMSG3
+ORDER BY
+	SGSTR

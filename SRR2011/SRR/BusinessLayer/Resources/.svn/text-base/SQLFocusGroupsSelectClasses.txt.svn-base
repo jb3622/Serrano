@@ -1,0 +1,26 @@
+SELECT
+	DCCLS As Class,
+	CASE 
+	WHEN DCWBENCH = 'D' THEN 'Daily'
+	WHEN DCWBENCH = 'W' THEN 'Weekly'
+	END AS Workbench,
+	CASE 
+	WHEN DCSTRTYP = 'C' THEN 'Online'
+	WHEN DCSTRTYP = 'B' THEN 'B&M'
+	END As StoreType,
+	DCSLUL As SalesLW,
+	DCSLUT As SalesTW,
+	DCCSRS As CurrentROS,
+	DCSSOH As StockonHand,
+	DCSWOC As Smoothedstorecover,
+	DCALRT As Allocated,
+	DCINTS As Shipped,
+	DCCSSR As Totalstockrequired,
+	DCNSRQ As IdealAllocQty,
+	IGPRAQ As ProposedAllocQty,
+	DCSTOU As Outofstock
+FROM
+	DSSRWBDCA
+WHERE
+	DCDPT = <departmentId>
+	AND DCSTR = <storeId>

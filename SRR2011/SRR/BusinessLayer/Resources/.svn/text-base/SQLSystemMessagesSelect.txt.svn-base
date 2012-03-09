@@ -1,0 +1,25 @@
+SELECT 
+	MGKEY as MessageId,
+	MGSYSN as SystemTag,
+	MGUSER as NetworkId,
+	MGSTRT as StartTime,
+	MGENDT as EndTime,
+	MGMON as Mon,
+	MGTUE as Tue,
+	MGWED as Wed,
+	MGTHU as Thu,
+	MGFRI as Fri,
+	MGSAT as Sat,
+	MGSUN as Sun,
+	MGMSG as Message,
+	MGSTS as Active,
+	MGTRM as Terminate
+FROM 
+	DSSRSMSG
+
+WHERE
+	MGSTS = '1'
+	AND (MGUSER = '*ALL' OR MGUSER = '<networkId>')
+	AND (MGSYSN = '*ALL' OR MGSYSN in ('<systemTags>'))
+	AND (MGSTRT=0 OR <time> BETWEEN MGSTRT AND MGENDT)
+	AND SUBSTR(MGSUN || MGMON || MGTUE || MGWED || MGTHU || MGFRI || MGSAT || MGSUN, (SELECT DAYOFWEEK(DATE(CURRENT_DATE)) FROM SYSIBM/SYSDUMMY1), 1) = '1'

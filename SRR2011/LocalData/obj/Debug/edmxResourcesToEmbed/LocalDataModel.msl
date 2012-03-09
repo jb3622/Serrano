@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LocalDataModelStoreContainer" CdmEntityContainer="LocalDataEntities">
+    <EntitySetMapping Name="eApplications">
+      <EntityTypeMapping TypeName="LocalDataModel.eApplication">
+        <MappingFragment StoreEntitySet="Applications">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eEnvironments">
+      <EntityTypeMapping TypeName="LocalDataModel.eEnvironment">
+        <MappingFragment StoreEntitySet="Environments">
+          <ScalarProperty Name="LibraryList" ColumnName="LibraryList" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Domain" ColumnName="Domain" />
+          <ScalarProperty Name="Hostname" ColumnName="Hostname" />
+          <ScalarProperty Name="EnvironmentName" ColumnName="EnvironmentName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eMenuOptions">
+      <EntityTypeMapping TypeName="LocalDataModel.eMenuOption">
+        <MappingFragment StoreEntitySet="MenuOptions">
+          <ScalarProperty Name="IsRestricted" ColumnName="Restricted" />
+          <ScalarProperty Name="MenuOption" ColumnName="MenuOption" />
+          <ScalarProperty Name="Tab" ColumnName="Tab" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eUsers">
+      <EntityTypeMapping TypeName="LocalDataModel.eUser">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="eMail" ColumnName="eMail" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="NetworkId" ColumnName="NetworkId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UserApplications" TypeName="LocalDataModel.UserApplications" StoreEntitySet="UserApplications">
+      <EndProperty Name="User">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="Application">
+        <ScalarProperty Name="Id" ColumnName="ApplicationId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserEnvironments" TypeName="LocalDataModel.UserEnvironments" StoreEntitySet="UserEnvironments">
+      <EndProperty Name="User">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="Environment">
+        <ScalarProperty Name="Id" ColumnName="EnvironmentId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserMenuOptions" TypeName="LocalDataModel.UserMenuOptions" StoreEntitySet="UserMenuOptions">
+      <EndProperty Name="User">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="MenuOption">
+        <ScalarProperty Name="Id" ColumnName="MenuOptionId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="LocalDataModel.Setting">
+        <MappingFragment StoreEntitySet="Settings">
+          <ScalarProperty Name="Version" ColumnName="Version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,7 @@
+SELECT 
+	DDPT as DeptId,
+	TRIM(DNAM) || ' (' || DDPT || ')' AS DeptName
+FROM
+	IPDEPTS
+ORDER BY
+	DNAM
