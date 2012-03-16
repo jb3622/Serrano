@@ -465,7 +465,7 @@ namespace Disney.iDash.Framework.Forms
             {
                 // bit of a cludge, must reset any 'IsDirty/FormState' properties to false/0 for any open form that has this property 
                 // to prevent the user being prompted to save any changes.
-                foreach (var frm in Application.OpenForms)
+                foreach (Form frm in Application.OpenForms)
                 {
                     var pi = frm.GetType().GetProperty("IsDirty");
                     if (pi != null && pi.CanWrite)
@@ -475,6 +475,7 @@ namespace Disney.iDash.Framework.Forms
                     if (pi != null && pi.CanWrite)
                         pi.SetValue(frm, 0, null);
 
+                    FormUtils.AddTag(frm, "ForceClose");
                 }
                 Application.DoEvents();
                 Thread.Sleep(5000);

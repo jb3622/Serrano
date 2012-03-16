@@ -164,6 +164,14 @@ namespace Disney.iDash.SRR.UI.Forms.Maintenance
         {
             e.Handled = true;
         }
+
+        private void gridItems_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
         //-----------------------------------------------------------------------------------------
         #endregion
     }

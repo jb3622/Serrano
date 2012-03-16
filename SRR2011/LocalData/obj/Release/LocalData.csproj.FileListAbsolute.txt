@@ -19,3 +19,10 @@ C:\Dev\Visual Studio 2010\iDash\branches\devintegration\bin\Release\Disney.iDash
 C:\Dev\Visual Studio 2010\iDash\branches\devintegration\LocalData\obj\Release\ResolveAssemblyReference.cache
 C:\Dev\Visual Studio 2010\iDash\branches\devintegration\LocalData\obj\Release\Disney.iDash.LocalData.dll
 C:\Dev\Visual Studio 2010\iDash\branches\devintegration\LocalData\obj\Release\Disney.iDash.LocalData.pdb
+C:\TEMP\xDev\root\SRR2011\bin\Release\LocalData.sdf
+C:\TEMP\xDev\root\SRR2011\bin\Release\Disney.iDash.LocalData.dll.config
+C:\TEMP\xDev\root\SRR2011\bin\Release\Disney.iDash.LocalData.dll
+C:\TEMP\xDev\root\SRR2011\bin\Release\Disney.iDash.LocalData.pdb
+C:\TEMP\xDev\root\SRR2011\LocalData\obj\Release\ResolveAssemblyReference.cache
+C:\TEMP\xDev\root\SRR2011\LocalData\obj\Release\Disney.iDash.LocalData.dll
+C:\TEMP\xDev\root\SRR2011\LocalData\obj\Release\Disney.iDash.LocalData.pdb

@@ -281,6 +281,7 @@
             this.gridAPMasterItem.UseEmbeddedNavigator = true;
             this.gridAPMasterItem.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewAPMasterItem});
+            this.gridAPMasterItem.Validating += new System.ComponentModel.CancelEventHandler(this.gridAPMasterItem_Validating);
             // 
             // viewAPMasterItem
             // 

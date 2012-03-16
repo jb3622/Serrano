@@ -47,5 +47,9 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
 		{
 			this.Close();
 		}
+
+        private void gridControl1_Validating(object sender, CancelEventArgs e)
+        {
+        }
 	}
 }

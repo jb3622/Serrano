@@ -294,6 +294,7 @@
             this.gridAPMasterItem.UseEmbeddedNavigator = true;
             this.gridAPMasterItem.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewAPMasterItem});
+            this.gridAPMasterItem.Validating += new System.ComponentModel.CancelEventHandler(this.gridAPMasterItem_Validating);
             // 
             // viewAPMasterItem
             // 
@@ -489,6 +490,7 @@
             this.gridAllocations.UseEmbeddedNavigator = true;
             this.gridAllocations.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewAllocations});
+            this.gridAllocations.Validating += new System.ComponentModel.CancelEventHandler(this.gridAllocations_Validating);
             // 
             // viewAllocations
             // 

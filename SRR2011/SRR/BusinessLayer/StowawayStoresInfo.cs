@@ -63,6 +63,28 @@ namespace Disney.iDash.SRR.BusinessLayer
 			return _data;
 		}
 
+        /// <summary>
+        /// Calls procedure to close files that have been left open on AS400 as a result of a call to GetInheritance or ModelRun.
+        /// </summary>
+        /// <returns></returns>
+        public void CloseAS400Files()
+        {
+            if (Factory.OpenConnection())
+                try
+                {
+                    var cmd = Factory.CreateCommand("DS890CS1", CommandType.StoredProcedure);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    ExceptionHandler.RaiseException(ex, "CloseAS400Files");
+                }
+                finally
+                {
+                    Factory.CloseConnection();
+                }
+        }
+
 		public bool Save()
 		{
 			var result = false;

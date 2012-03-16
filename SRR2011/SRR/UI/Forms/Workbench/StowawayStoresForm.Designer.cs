@@ -160,7 +160,6 @@
             // cboStore
             // 
             this.cboStore.AllowedCharacters = "";
-
             this.cboStore.AutoSize = true;
             this.cboStore.EditValue = null;
             this.cboStore.Location = new System.Drawing.Point(307, 48);
@@ -176,10 +175,8 @@
             // cboDepartment
             // 
             this.cboDepartment.AllowedCharacters = "";
-
             this.cboDepartment.AutoSize = true;
             this.cboDepartment.EditValue = null;
-
             this.cboDepartment.Location = new System.Drawing.Point(14, 48);
             this.cboDepartment.LookupType = Disney.iDash.SRR.BusinessLayer.LookupSource.LookupTypes.Departments;
             this.cboDepartment.MaxLength = 0;
@@ -216,6 +213,7 @@
             this.gridItems.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewItems});
             this.gridItems.Visible = false;
+            this.gridItems.Validating += new System.ComponentModel.CancelEventHandler(this.gridItems_Validating);
             // 
             // viewItems
             // 
@@ -423,14 +421,14 @@
             this.btnClose.Text = "&Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // StowawayStores
+            // StowawayStoresForm
             // 
             this.AcceptButton = this.btnSearch;
             this.Appearance.Font = new System.Drawing.Font("Arial", 8.25F);
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.ClientSize = new System.Drawing.Size(815, 555);
-            this.Name = "StowawayStores";
+            this.Name = "StowawayStoresForm";
             this.Text = "Stowaway Stores";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StowawayStores_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.ClientPanel)).EndInit();

@@ -69,6 +69,7 @@ namespace Disney.iDash.Framework.Forms
 			if (validUser)
 			{
 
+                ClearLocks(txtNetworkId.Text);
                 Session.User = _entities.eUsers.Where((u) => (u.NetworkId.ToLower() == txtNetworkId.Text.ToLower())).FirstOrDefault();
 				if (Session.User != null && Session.User.Active.HasValue && Session.User.Active.Value)
 				{
@@ -76,7 +77,7 @@ namespace Disney.iDash.Framework.Forms
 					if (_sysInfo.IsSystemAvailable())
 					{
 						UpdateStatusMessage("Success!");
-						Thread.Sleep(2000);
+						Thread.Sleep(800);
 						this.DialogResult = DialogResult.OK;
 						this.Close();
 					}
@@ -104,8 +105,43 @@ namespace Disney.iDash.Framework.Forms
                 Thread.Sleep(2000);
                 this.DialogResult = DialogResult.Cancel;
                 this.Close();
+            }      
+        }
+
+        /// <summary>
+        /// This function clears down any redundant locks that have not been properly released
+        /// by previous sessions and have been left on the system.
+        /// </summary>
+        /// <param name="loginId"></param>
+        /// <returns></returns>
+        protected bool ClearLocks(string loginId)
+        {
+            bool result = false;
+            string strSQL = "";
+
+            if (_factory.OpenConnection())
+            {
+                try
+                {
+                    strSQL = Properties.Resources.SQLDeleteUserLocks1.Replace("<LOUSR>", loginId);
+                    var cmdClearLocks = _factory.CreateCommand(strSQL);
+                    cmdClearLocks.ExecuteNonQuery();
+
+                    strSQL = Properties.Resources.SQLDeleteUserLocks2.Replace("<IAUSER>", loginId);
+                    cmdClearLocks = _factory.CreateCommand(strSQL);
+                    cmdClearLocks.ExecuteNonQuery();
+                    result = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                finally
+                {
+                    _factory.CloseConnection();
+                }
             }
-            
+            return(result);
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)

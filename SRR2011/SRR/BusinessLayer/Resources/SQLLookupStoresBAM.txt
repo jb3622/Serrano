@@ -1,0 +1,8 @@
+SELECT DISTINCT SGSTR as Id,                               
+       TRIM(SGSNAM) || ' (' || SGSTR || ')' As Description 
+  FROM DSSRMSG3                                            
+ WHERE SGSTR not in ( SELECT CAST(CONVAL3 AS DECIMAL(3,0))  
+                        FROM DSCONSP                        
+                        WHERE CONKEY1 = 'INTERNET STORE'     
+                          AND CONKEY3 = ' ' )                
+ORDER BY SGSTR                                             

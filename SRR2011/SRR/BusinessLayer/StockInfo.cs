@@ -57,7 +57,7 @@ namespace Disney.iDash.SRR.BusinessLayer
            actionResult = "";
 
             try
-            {       
+            {
                DataTable dataTbl = this.GetLocks(deptId, userName);
                if (dataTbl != null)
                {
@@ -68,7 +68,7 @@ namespace Disney.iDash.SRR.BusinessLayer
 
                        if (usr != userName && dptId == deptId)
                        {
-                           actionResult = "Department[" + deptId.ToString() + "] is currently locked by " + usr + ".";
+                           actionResult = "Department [" + deptId.ToString() + "] is currently locked by " + usr + ".";
                            return false;
                        }
                        if (usr == userName && dptId == deptId)

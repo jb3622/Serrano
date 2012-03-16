@@ -132,8 +132,7 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
 					this.Close();
 					base.ShowParentForm();
 				}
-            }
-			
+            }			
 		}
 
         private void btnModelRun_Click(object sender, EventArgs e)
@@ -446,6 +445,13 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
                     GetNewCellValue("CUTOFF", e.Value, out newCellValue, CheckRange(e.Value, 0.00m, 99.99m), "Valid range is: 0.00 to 99.999");
                     break;
 
+                case DetailedWorkbenchInfo.colNewSmoothingFactor:
+                    if (e.Value == "" || e.Value == null)
+                    {
+                        e.Value = DBNull.Value;
+                    }
+                    break;
+
 				case DetailedWorkbenchInfo.colNewPattern:
 					var storeType = viewLevers.GetFocusedRowCellValue(DetailedWorkbenchInfo.colStoreType).ToString();
                     if (storeType == Constants.kOnline)
@@ -459,7 +465,6 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
                         GetNewCellValue("PATTERN", e.Value, out newCellValue, CheckRange(e.Value, 100, 999), "Valid range is: 100 to 999");
                     }
 					break;
-
 			}
             if (newCellValue != null)
             {
@@ -475,6 +480,14 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
 
 		private bool CheckRange(object cellValue, decimal minValue, decimal maxValue)
 		{
+            if (cellValue != null)
+            {
+                if (cellValue.ToString() == String.Empty)
+                {
+                    cellValue = null;
+                }  
+            }
+
 			return cellValue == null || (((decimal)cellValue) >= minValue && ((decimal)cellValue) <= maxValue);
 		}
 
@@ -1792,6 +1805,19 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
             {
                 _giveItBackChanged = true;
             }                
+        }
+
+        private void gridLevers_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void DetailedWorkbenchForm_Validating(object sender, CancelEventArgs e)
+        {
+
         }
 
         

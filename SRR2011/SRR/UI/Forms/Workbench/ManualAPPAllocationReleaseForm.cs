@@ -450,6 +450,22 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
 
         }
 
+        private void gridAPMasterItem_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void gridAllocations_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
 
         //-----------------------------------------------------------------------------------------
         #endregion

@@ -85,7 +85,30 @@ namespace Disney.iDash.SRR.BusinessLayer
 		{
 			return GetData(Properties.Resources.SQLStoreLeadTimesSelect + "AND ds.DCTR IN (<markets>) ORDER BY c.CSDESC, s.SSTR".Replace("<markets>", "'" + markets + "'"));
 		}
-		
+
+        /// <summary>
+        /// Calls procedure to close files that have been left open on AS400
+        /// </summary>
+        /// <returns></returns>
+        public void CloseAS400Files()
+        {
+            if (Factory.OpenConnection())
+                try
+                {
+                    var cmd = Factory.CreateCommand("DS890CS1", CommandType.StoredProcedure);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    ExceptionHandler.RaiseException(ex, "CloseAS400Files");
+                }
+                finally
+                {
+                    Factory.CloseConnection();
+                }
+        }
+
+
 		/// <summary>
         /// Update any changes made to store lead times.
         /// </summary>

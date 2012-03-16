@@ -20,7 +20,7 @@ namespace Disney.iDash.SRR.BusinessLayer
             _items.Clear();
             if (base.Factory.OpenConnection())
                 try
-                {
+                {                    
                     var table = base.Factory.CreateTable(Properties.Resources.SQLStoreGroupsSelect);
                     _items = base.Factory.PopulateProperties<StoreGroup>(table, typeof(StoreGroup), new DataLayer.DB2Factory.CustomConversionDelegate(ConvertType));
                     result = true;

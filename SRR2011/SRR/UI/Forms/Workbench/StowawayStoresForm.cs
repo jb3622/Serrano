@@ -267,8 +267,11 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
 
 		private void StowawayStores_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			if (!e.Cancel)
-				base.SaveLayout(this.viewItems, kGridRegistryKey);
+            if (!e.Cancel)
+            {
+                _stowawayStores.CloseAS400Files();
+                base.SaveLayout(this.viewItems, kGridRegistryKey);
+            }
 
 		}
 		//-----------------------------------------------------------------------------------------
@@ -328,6 +331,14 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
         private void riQty_Spin(object sender, DevExpress.XtraEditors.Controls.SpinEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void gridItems_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
         }
 
 		//-----------------------------------------------------------------------------------------

@@ -317,6 +317,14 @@ namespace Disney.iDash.SRR.UI.Forms.Maintenance
             string userId = Session.User.NetworkId.ToUpper();
             _stockInfo.ReleaseLock((decimal)cboDept.EditValue, userId);
         }
+
+        private void gridItems_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
 		
         //-----------------------------------------------------------------------------------------
         #endregion

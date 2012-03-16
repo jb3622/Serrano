@@ -209,6 +209,22 @@ namespace Disney.iDash.SRR.UI.Forms.Maintenance
         }
         #endregion
 
+        private void StoreDeleteScheduleForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!e.Cancel)
+            {
+                _storeInfo.CloseAS400Files();
+            }
+        }
+
+        private void gridItems_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
 
     }
 }

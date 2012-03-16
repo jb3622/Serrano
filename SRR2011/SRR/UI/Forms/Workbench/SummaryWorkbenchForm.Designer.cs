@@ -151,9 +151,9 @@
             this.ClientPanel.Controls.Add(this.btnModelRun);
             this.ClientPanel.Controls.Add(this.btnExit);
             this.ClientPanel.Controls.Add(this.btnApply);
-            this.ClientPanel.Location = new System.Drawing.Point(0, 31);
-            this.ClientPanel.Size = new System.Drawing.Size(780, 546);
+            this.ClientPanel.Size = new System.Drawing.Size(780, 542);
             this.ClientPanel.TabIndex = 0;
+            this.ClientPanel.Validating += new System.ComponentModel.CancelEventHandler(this.ClientPanel_Validating);
             // 
             // BoxStyles
             // 
@@ -194,21 +194,16 @@
             this.BoxStyles.AppearanceReadOnly.Options.UseFont = true;
             this.BoxStyles.AppearanceReadOnly.Options.UseForeColor = true;
             // 
-            // barStatus
-            // 
-            this.barStatus.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.barStatus.Appearance.Options.UseFont = true;
-            // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 577);
-            this.ribbonStatusBar.Size = new System.Drawing.Size(780, 23);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 569);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(780, 31);
             // 
             // btnModelRun
             // 
             this.btnModelRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModelRun.Enabled = false;
-            this.btnModelRun.Location = new System.Drawing.Point(538, 517);
+            this.btnModelRun.Location = new System.Drawing.Point(538, 513);
             this.btnModelRun.Name = "btnModelRun";
             this.btnModelRun.Size = new System.Drawing.Size(75, 23);
             this.btnModelRun.TabIndex = 4;
@@ -219,7 +214,7 @@
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Location = new System.Drawing.Point(700, 517);
+            this.btnExit.Location = new System.Drawing.Point(700, 513);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 6;
@@ -230,7 +225,7 @@
             // 
             this.btnApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnApply.Enabled = false;
-            this.btnApply.Location = new System.Drawing.Point(619, 517);
+            this.btnApply.Location = new System.Drawing.Point(619, 513);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(75, 23);
             this.btnApply.TabIndex = 5;
@@ -249,7 +244,7 @@
             this.tabControl.Location = new System.Drawing.Point(12, 114);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedTabPage = this.tpDept;
-            this.tabControl.Size = new System.Drawing.Size(756, 388);
+            this.tabControl.Size = new System.Drawing.Size(756, 384);
             this.tabControl.TabIndex = 1;
             this.tabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tpDept,
@@ -267,7 +262,7 @@
             // 
             this.tpDept.Controls.Add(this.gridDept);
             this.tpDept.Name = "tpDept";
-            this.tpDept.Size = new System.Drawing.Size(754, 365);
+            this.tpDept.Size = new System.Drawing.Size(750, 357);
             this.tpDept.Tag = "16";
             this.tpDept.Text = "Dept";
             // 
@@ -297,12 +292,13 @@
             this.riUpliftFactor,
             this.riCutOff,
             this.riSmoothingFactor});
-            this.gridDept.Size = new System.Drawing.Size(754, 365);
+            this.gridDept.Size = new System.Drawing.Size(750, 357);
             this.gridDept.TabIndex = 0;
             this.gridDept.UseEmbeddedNavigator = true;
             this.gridDept.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewDept});
             this.gridDept.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grid_KeyDown);
+            this.gridDept.Validating += new System.ComponentModel.CancelEventHandler(this.gridDept_Validating);
             // 
             // mnuGridOptions
             // 
@@ -356,35 +352,35 @@
             // mnuAllocationFlag
             // 
             this.mnuAllocationFlag.Name = "mnuAllocationFlag";
-            this.mnuAllocationFlag.Size = new System.Drawing.Size(169, 22);
+            this.mnuAllocationFlag.Size = new System.Drawing.Size(158, 22);
             this.mnuAllocationFlag.Text = "Allocation Flag";
             this.mnuAllocationFlag.Click += new System.EventHandler(this.mnuAllocationFlag_Click);
             // 
             // mnuCutOffFactor
             // 
             this.mnuCutOffFactor.Name = "mnuCutOffFactor";
-            this.mnuCutOffFactor.Size = new System.Drawing.Size(169, 22);
+            this.mnuCutOffFactor.Size = new System.Drawing.Size(158, 22);
             this.mnuCutOffFactor.Text = "Cover Cutoff";
             this.mnuCutOffFactor.Click += new System.EventHandler(this.mnuCutOffFactor_Click);
             // 
             // mnuPattern
             // 
             this.mnuPattern.Name = "mnuPattern";
-            this.mnuPattern.Size = new System.Drawing.Size(169, 22);
+            this.mnuPattern.Size = new System.Drawing.Size(158, 22);
             this.mnuPattern.Text = "Pattern";
             this.mnuPattern.Click += new System.EventHandler(this.mnuPattern_Click);
             // 
             // mnuSmoothingFactor
             // 
             this.mnuSmoothingFactor.Name = "mnuSmoothingFactor";
-            this.mnuSmoothingFactor.Size = new System.Drawing.Size(169, 22);
+            this.mnuSmoothingFactor.Size = new System.Drawing.Size(158, 22);
             this.mnuSmoothingFactor.Text = "Smoothing Factor";
             this.mnuSmoothingFactor.Click += new System.EventHandler(this.mnuSmoothingFactor_Click);
             // 
             // mnuUpliftFactor
             // 
             this.mnuUpliftFactor.Name = "mnuUpliftFactor";
-            this.mnuUpliftFactor.Size = new System.Drawing.Size(169, 22);
+            this.mnuUpliftFactor.Size = new System.Drawing.Size(158, 22);
             this.mnuUpliftFactor.Text = "Uplift Factor";
             this.mnuUpliftFactor.Click += new System.EventHandler(this.mnuUpliftFactor_Click);
             // 
@@ -482,7 +478,7 @@
             // 
             this.tpDeptMarket.Controls.Add(this.gridDeptMarket);
             this.tpDeptMarket.Name = "tpDeptMarket";
-            this.tpDeptMarket.Size = new System.Drawing.Size(754, 361);
+            this.tpDeptMarket.Size = new System.Drawing.Size(750, 357);
             this.tpDeptMarket.Tag = "15";
             this.tpDeptMarket.Text = "Dept Market";
             // 
@@ -501,12 +497,13 @@
             this.gridDeptMarket.Location = new System.Drawing.Point(0, 0);
             this.gridDeptMarket.MainView = this.viewDeptMarket;
             this.gridDeptMarket.Name = "gridDeptMarket";
-            this.gridDeptMarket.Size = new System.Drawing.Size(754, 361);
+            this.gridDeptMarket.Size = new System.Drawing.Size(750, 357);
             this.gridDeptMarket.TabIndex = 1;
             this.gridDeptMarket.UseEmbeddedNavigator = true;
             this.gridDeptMarket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewDeptMarket});
             this.gridDeptMarket.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grid_KeyDown);
+            this.gridDeptMarket.Validating += new System.ComponentModel.CancelEventHandler(this.gridDeptMarket_Validating);
             // 
             // viewDeptMarket
             // 
@@ -536,7 +533,7 @@
             // 
             this.tpDeptGrade.Controls.Add(this.gridDeptGrade);
             this.tpDeptGrade.Name = "tpDeptGrade";
-            this.tpDeptGrade.Size = new System.Drawing.Size(754, 361);
+            this.tpDeptGrade.Size = new System.Drawing.Size(750, 357);
             this.tpDeptGrade.Tag = "14";
             this.tpDeptGrade.Text = "Dept Grade";
             // 
@@ -555,12 +552,13 @@
             this.gridDeptGrade.Location = new System.Drawing.Point(0, 0);
             this.gridDeptGrade.MainView = this.viewDeptGrade;
             this.gridDeptGrade.Name = "gridDeptGrade";
-            this.gridDeptGrade.Size = new System.Drawing.Size(754, 361);
+            this.gridDeptGrade.Size = new System.Drawing.Size(750, 357);
             this.gridDeptGrade.TabIndex = 2;
             this.gridDeptGrade.UseEmbeddedNavigator = true;
             this.gridDeptGrade.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewDeptGrade});
             this.gridDeptGrade.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grid_KeyDown);
+            this.gridDeptGrade.Validating += new System.ComponentModel.CancelEventHandler(this.gridDeptGrade_Validating);
             // 
             // viewDeptGrade
             // 
@@ -590,7 +588,7 @@
             // 
             this.tpDeptStore.Controls.Add(this.gridDeptStore);
             this.tpDeptStore.Name = "tpDeptStore";
-            this.tpDeptStore.Size = new System.Drawing.Size(754, 361);
+            this.tpDeptStore.Size = new System.Drawing.Size(750, 357);
             this.tpDeptStore.Tag = "13";
             this.tpDeptStore.Text = "Dept Store";
             // 
@@ -609,12 +607,13 @@
             this.gridDeptStore.Location = new System.Drawing.Point(0, 0);
             this.gridDeptStore.MainView = this.viewDeptStore;
             this.gridDeptStore.Name = "gridDeptStore";
-            this.gridDeptStore.Size = new System.Drawing.Size(754, 361);
+            this.gridDeptStore.Size = new System.Drawing.Size(750, 357);
             this.gridDeptStore.TabIndex = 2;
             this.gridDeptStore.UseEmbeddedNavigator = true;
             this.gridDeptStore.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewDeptStore});
             this.gridDeptStore.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grid_KeyDown);
+            this.gridDeptStore.Validating += new System.ComponentModel.CancelEventHandler(this.gridDeptStore_Validating);
             // 
             // viewDeptStore
             // 
@@ -644,7 +643,7 @@
             // 
             this.tpClass.Controls.Add(this.gridClass);
             this.tpClass.Name = "tpClass";
-            this.tpClass.Size = new System.Drawing.Size(754, 361);
+            this.tpClass.Size = new System.Drawing.Size(750, 357);
             this.tpClass.Tag = "12";
             this.tpClass.Text = "Class";
             // 
@@ -663,12 +662,13 @@
             this.gridClass.Location = new System.Drawing.Point(0, 0);
             this.gridClass.MainView = this.viewClass;
             this.gridClass.Name = "gridClass";
-            this.gridClass.Size = new System.Drawing.Size(754, 361);
+            this.gridClass.Size = new System.Drawing.Size(750, 357);
             this.gridClass.TabIndex = 2;
             this.gridClass.UseEmbeddedNavigator = true;
             this.gridClass.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewClass});
             this.gridClass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grid_KeyDown);
+            this.gridClass.Validating += new System.ComponentModel.CancelEventHandler(this.gridClass_Validating);
             // 
             // viewClass
             // 
@@ -698,7 +698,7 @@
             // 
             this.tpClassMarket.Controls.Add(this.gridClassMarket);
             this.tpClassMarket.Name = "tpClassMarket";
-            this.tpClassMarket.Size = new System.Drawing.Size(754, 361);
+            this.tpClassMarket.Size = new System.Drawing.Size(750, 357);
             this.tpClassMarket.Tag = "11";
             this.tpClassMarket.Text = "Class Market";
             // 
@@ -717,12 +717,13 @@
             this.gridClassMarket.Location = new System.Drawing.Point(0, 0);
             this.gridClassMarket.MainView = this.viewClassMarket;
             this.gridClassMarket.Name = "gridClassMarket";
-            this.gridClassMarket.Size = new System.Drawing.Size(754, 361);
+            this.gridClassMarket.Size = new System.Drawing.Size(750, 357);
             this.gridClassMarket.TabIndex = 2;
             this.gridClassMarket.UseEmbeddedNavigator = true;
             this.gridClassMarket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewClassMarket});
             this.gridClassMarket.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grid_KeyDown);
+            this.gridClassMarket.Validating += new System.ComponentModel.CancelEventHandler(this.gridClassMarket_Validating);
             // 
             // viewClassMarket
             // 
@@ -752,7 +753,7 @@
             // 
             this.tpClassGrade.Controls.Add(this.gridClassGrade);
             this.tpClassGrade.Name = "tpClassGrade";
-            this.tpClassGrade.Size = new System.Drawing.Size(754, 361);
+            this.tpClassGrade.Size = new System.Drawing.Size(750, 357);
             this.tpClassGrade.Tag = "10";
             this.tpClassGrade.Text = "Class Grade";
             // 
@@ -771,12 +772,13 @@
             this.gridClassGrade.Location = new System.Drawing.Point(0, 0);
             this.gridClassGrade.MainView = this.viewClassGrade;
             this.gridClassGrade.Name = "gridClassGrade";
-            this.gridClassGrade.Size = new System.Drawing.Size(754, 361);
+            this.gridClassGrade.Size = new System.Drawing.Size(750, 357);
             this.gridClassGrade.TabIndex = 2;
             this.gridClassGrade.UseEmbeddedNavigator = true;
             this.gridClassGrade.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewClassGrade});
             this.gridClassGrade.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grid_KeyDown);
+            this.gridClassGrade.Validating += new System.ComponentModel.CancelEventHandler(this.gridClassGrade_Validating);
             // 
             // viewClassGrade
             // 
@@ -806,7 +808,7 @@
             // 
             this.tpClassStore.Controls.Add(this.gridClassStore);
             this.tpClassStore.Name = "tpClassStore";
-            this.tpClassStore.Size = new System.Drawing.Size(754, 361);
+            this.tpClassStore.Size = new System.Drawing.Size(750, 357);
             this.tpClassStore.Tag = "9";
             this.tpClassStore.Text = "Class Store";
             // 
@@ -825,12 +827,13 @@
             this.gridClassStore.Location = new System.Drawing.Point(0, 0);
             this.gridClassStore.MainView = this.viewClassStore;
             this.gridClassStore.Name = "gridClassStore";
-            this.gridClassStore.Size = new System.Drawing.Size(754, 361);
+            this.gridClassStore.Size = new System.Drawing.Size(750, 357);
             this.gridClassStore.TabIndex = 2;
             this.gridClassStore.UseEmbeddedNavigator = true;
             this.gridClassStore.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewClassStore});
             this.gridClassStore.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grid_KeyDown);
+            this.gridClassStore.Validating += new System.ComponentModel.CancelEventHandler(this.gridClassStore_Validating);
             // 
             // viewClassStore
             // 
@@ -860,7 +863,7 @@
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Enabled = false;
-            this.btnEdit.Location = new System.Drawing.Point(376, 517);
+            this.btnEdit.Location = new System.Drawing.Point(376, 513);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 2;
@@ -885,6 +888,7 @@
             this.groupControl1.Size = new System.Drawing.Size(751, 88);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Select Department";
+            this.groupControl1.Validating += new System.ComponentModel.CancelEventHandler(this.groupControl1_Validating);
             // 
             // label1
             // 
@@ -966,6 +970,7 @@
             this.DepartmentSelector.TabIndex = 1;
             this.DepartmentSelector.Workbench = Disney.iDash.SRR.BusinessLayer.Constants.Workbenches.Daily;
             this.DepartmentSelector.ComboLeave += new Disney.iDash.SRR.Controls.DepartmentSelectorControl.ControlHandler(this.DepartmentSelector_ComboLeave);
+            this.DepartmentSelector.Validating += new System.ComponentModel.CancelEventHandler(this.DepartmentSelector_Validating);
             // 
             // pmnuSearch
             // 
@@ -1047,7 +1052,7 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Enabled = false;
-            this.btnCancel.Location = new System.Drawing.Point(457, 517);
+            this.btnCancel.Location = new System.Drawing.Point(457, 513);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 3;

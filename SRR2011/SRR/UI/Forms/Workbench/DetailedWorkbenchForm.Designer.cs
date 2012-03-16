@@ -29,7 +29,7 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnBack = new DevExpress.XtraEditors.SimpleButton();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.btnApply = new DevExpress.XtraEditors.SimpleButton();
@@ -261,6 +261,7 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
             this.viewLevers});
             this.gridLevers.Visible = false;
             this.gridLevers.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridLevers_KeyDown);
+            this.gridLevers.Validating += new System.ComponentModel.CancelEventHandler(this.gridLevers_Validating);
             // 
             // mnuGridContextStrip
             // 
@@ -567,7 +568,7 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
             this.riPatternId.AutoHeight = false;
             this.riPatternId.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Clear", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Clear", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.riPatternId.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", "Description")});
@@ -778,6 +779,7 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
             this.Text = "Detailed Allocators Workbench";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DetailedWorkbench_FormClosing);
+            this.Validating += new System.ComponentModel.CancelEventHandler(this.DetailedWorkbenchForm_Validating);
             this.Controls.SetChildIndex(this.ribbonStatusBar, 0);
             this.Controls.SetChildIndex(this.ClientPanel, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ClientPanel)).EndInit();

@@ -112,6 +112,7 @@
             this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView1});
+            this.gridControl1.Validating += new System.ComponentModel.CancelEventHandler(this.gridControl1_Validating);
             // 
             // bandedGridView1
             // 

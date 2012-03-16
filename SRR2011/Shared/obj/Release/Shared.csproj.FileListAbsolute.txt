@@ -37,3 +37,16 @@ C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Release\Gener
 C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Release\GenerateResource.write.1.tlog
 C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Release\Disney.iDash.Shared.dll
 C:\Dev\Visual Studio 2010\iDash\branches\devintegration\Shared\obj\Release\Disney.iDash.Shared.pdb
+C:\TEMP\xDev\root\SRR2011\bin\Release\Disney.iDash.Shared.dll.config
+C:\TEMP\xDev\root\SRR2011\bin\Release\Disney.iDash.Shared.dll
+C:\TEMP\xDev\root\SRR2011\bin\Release\Disney.iDash.Shared.pdb
+C:\TEMP\xDev\root\SRR2011\Shared\obj\Release\ResolveAssemblyReference.cache
+C:\TEMP\xDev\root\SRR2011\Shared\obj\Release\Disney.iDash.Shared.Controls.ListEditor.resources
+C:\TEMP\xDev\root\SRR2011\Shared\obj\Release\Disney.iDash.Shared.Forms.CustomDialog.resources
+C:\TEMP\xDev\root\SRR2011\Shared\obj\Release\Disney.iDash.Shared.Forms.ErrorDialogForm.resources
+C:\TEMP\xDev\root\SRR2011\Shared\obj\Release\Disney.iDash.Shared.Controls.ListMover.resources
+C:\TEMP\xDev\root\SRR2011\Shared\obj\Release\Disney.iDash.Shared.Properties.Resources.resources
+C:\TEMP\xDev\root\SRR2011\Shared\obj\Release\GenerateResource.read.1.tlog
+C:\TEMP\xDev\root\SRR2011\Shared\obj\Release\GenerateResource.write.1.tlog
+C:\TEMP\xDev\root\SRR2011\Shared\obj\Release\Disney.iDash.Shared.dll
+C:\TEMP\xDev\root\SRR2011\Shared\obj\Release\Disney.iDash.Shared.pdb

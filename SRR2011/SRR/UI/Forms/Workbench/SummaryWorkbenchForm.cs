@@ -134,37 +134,45 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
 				buttonState.Disable();
 				_allowExit = false;
 
-				this.Cursor = Cursors.WaitCursor;
-				Application.DoEvents();
-
-                if (_summaryWorkbenchInfo.IsModelRunAvailable())
+                try
                 {
-                    var timeStart = System.DateTime.Now;
                     this.Cursor = Cursors.WaitCursor;
-                    base.UpdateStatusMessage("Applying changes...");
+                    Application.DoEvents();
 
-                    if (_summaryWorkbenchInfo.SaveChanges() && _summaryWorkbenchInfo.ApplyChanges())
+                    if (_summaryWorkbenchInfo.IsModelRunAvailable())
                     {
+                        var timeStart = System.DateTime.Now;
+                        this.Cursor = Cursors.WaitCursor;
+                        base.UpdateStatusMessage("Applying changes...");
 
-                        tabControl.Visible = false;
-                        ResetDepartmentSelector();
-                        EditMode = false;
+                        if (_summaryWorkbenchInfo.SaveChanges() && _summaryWorkbenchInfo.ApplyChanges())
+                        {
 
-                        ResetForm();
-                        UpdateStatusMessage("Lever changes have been applied");
+                            tabControl.Visible = false;
+                            ResetDepartmentSelector();
+                            EditMode = false;
+
+                            ResetForm();
+                            UpdateStatusMessage("Lever changes have been applied");
+                        }
+                        else
+                            UpdateStatusMessage("Failed to apply lever changes");
                     }
                     else
-                        UpdateStatusMessage("Failed to apply lever changes");
-                }
-                else
-                {
-                    MessageBox.Show("Unable to process your request at this time. The system is still preparing files. Please try again in a few minutes",
-                         "Apply", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
+                    {
+                        MessageBox.Show("Unable to process your request at this time. The system is still preparing files. Please try again in a few minutes",
+                             "Apply", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
 
-                buttonState.RestoreState();
-                this.Cursor = Cursors.Default;
-				_allowExit = true;
+                    buttonState.RestoreState();
+                }
+                catch (Exception exc)
+                {}
+                finally
+                {
+                    this.Cursor = Cursors.Default;
+                    _allowExit = true;
+                }
 			}
         }
 
@@ -210,48 +218,56 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
 				buttonState.Disable();
 				_allowExit = false;
 
-				this.Cursor = Cursors.WaitCursor;
-				Application.DoEvents();
+                try
+                {
+                    this.Cursor = Cursors.WaitCursor;
+                    Application.DoEvents();
 
-				if (_summaryWorkbenchInfo.IsModelRunAvailable())
-				{
-					var timeStart = System.DateTime.Now;
-					this.Cursor = Cursors.WaitCursor;
-					base.UpdateStatusMessage("Running Model...");
-
-                    if (_summaryWorkbenchInfo.SaveChanges() && _summaryWorkbenchInfo.RunModel())
+                    if (_summaryWorkbenchInfo.IsModelRunAvailable())
                     {
-                        gridDept.Visible = false;
-                        gridDept.SuspendLayout();
+                        var timeStart = System.DateTime.Now;
+                        this.Cursor = Cursors.WaitCursor;
+                        base.UpdateStatusMessage("Running Model...");
 
-                        _summaryWorkbenchInfo.AliasDrop();
-                        _summaryWorkbenchInfo.InitialDataLoad();
-                        _summaryWorkbenchInfo.InitialiseScreen();
+                        if (_summaryWorkbenchInfo.SaveChanges() && _summaryWorkbenchInfo.RunModel())
+                        {
+                            gridDept.Visible = false;
+                            gridDept.SuspendLayout();
 
-                        ClearAllGrids();
+                            _summaryWorkbenchInfo.AliasDrop();
+                            _summaryWorkbenchInfo.InitialDataLoad();
+                            _summaryWorkbenchInfo.InitialiseScreen();
 
-                        BuildAllGrids();
-                        BuildAllViews();
+                            ClearAllGrids();
 
-                        tabControl.Visible = true;
-                        gridDept.Visible = true;
-                        SetupMenu();
-                        gridDept.ResumeLayout();
+                            BuildAllGrids();
+                            BuildAllViews();
 
-                        RefreshGrid(GetCurrentGrid(), GetCurrentView(), _summaryWorkbenchInfo.SelectedSummaryLevel);
+                            tabControl.Visible = true;
+                            gridDept.Visible = true;
+                            SetupMenu();
+                            gridDept.ResumeLayout();
 
-                        UpdateStatusMessage(string.Format("Model run time {0:0.0}secs", System.DateTime.Now.Subtract(timeStart).TotalSeconds));
+                            RefreshGrid(GetCurrentGrid(), GetCurrentView(), _summaryWorkbenchInfo.SelectedSummaryLevel);
+
+                            UpdateStatusMessage(string.Format("Model run time {0:0.0}secs", System.DateTime.Now.Subtract(timeStart).TotalSeconds));
+                        }
+                        else
+                            UpdateStatusMessage("Failed to complete model run");
                     }
                     else
-                        UpdateStatusMessage("Failed to complete model run");
-				}
-				else
-					MessageBox.Show("Unable to process your request at this time. The system is still preparing files. Please try again in a few minutes",
-						"Model Run", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Unable to process your request at this time. The system is still preparing files. Please try again in a few minutes",
+                            "Model Run", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-				this.Cursor = Cursors.Default;
-				buttonState.RestoreState();
-				_allowExit = true;
+                    buttonState.RestoreState();
+                }
+                catch (Exception exc)
+                {}
+                finally
+                {
+                    this.Cursor = Cursors.Default;
+                    _allowExit = true;
+                }
 			}
         }
 
@@ -1278,8 +1294,8 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
 
                 _highlights.Clear();
 
-				_summaryWorkbenchInfo.Workbench = (Constants.Workbenches)DepartmentSelector.Workbench;
-				_summaryWorkbenchInfo.StoreType = (Constants.StoreTypes)DepartmentSelector.StoreType;
+                _summaryWorkbenchInfo.Workbench = (Constants.Workbenches)DepartmentSelector.Workbench;
+                _summaryWorkbenchInfo.StoreType = (Constants.StoreTypes)DepartmentSelector.StoreType;
 
                 if (_bwSearch == null)
                 {
@@ -1311,36 +1327,18 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
                             _allowExit = true;
                         });
                 }
-
                 _allowExit = false;
-	    		_bwSearch.RunWorkerAsync();
-/*
-				_summaryWorkbenchInfo.WorkbenchInitialLoad();
-
-				ClearAllGrids();
-
-				BuildAllGrids();
-				BuildAllViews();
-
-				tabControl.Visible = true;
-				gridDept.Visible = true;
-				SetupMenu();
-				gridDept.ResumeLayout();
-
-				DepartmentSelector.Enabled = false;
-				btnSearchEdit.Enabled = false;
-				btnSearchView.Enabled = false;
-
-				this.Cursor = Cursors.Default;
-				UpdateStatusMessage(string.Format("Load time {0:0.0}secs", System.DateTime.Now.Subtract(timeStart).TotalSeconds));
-				tabControl.SelectedTabPageIndex = 0; // select Department level
- */
-			}
+                _bwSearch.RunWorkerAsync();
+            }
             catch (Exception ex)
             {
-                _allowExit = true; 
+                _allowExit = true;
                 this.Cursor = Cursors.Default;
                 ErrorDialog.Show(ex, "InitialDataLoad");
+            }
+            finally
+            {
+                _allowExit = true;
             }
         }
 
@@ -2373,6 +2371,7 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
                 }
 
                 if (_summaryWorkbenchInfo.IsDirty && _summaryWorkbenchInfo.ApplyChangesAllowed)
+                {
                     switch (Question.YesNoCancel("Changes have been made to these items, save them before exiting?", this.Text))
                     {
                         case System.Windows.Forms.DialogResult.Yes:
@@ -2399,9 +2398,13 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
                             e.Cancel = true;
                             break;
                     }
+                }
+                base.Instance.CloseAS400Files();
             }
             else
+            {
                 e.Cancel = true;
+            }
         }
 
         private void SummaryWorkbench_FormClosed(object sender, FormClosedEventArgs e)
@@ -2552,6 +2555,100 @@ namespace Disney.iDash.SRR.UI.Forms.Workbench
                 utils.ExportToExcel(dialog.FileName, viewDept, viewDeptMarket, viewDeptGrade, viewDeptStore, viewClass, viewClassMarket, viewClassGrade, viewClassStore);
 			}
 		}
+
+        private void gridDept_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void gridClass_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void gridClassGrade_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void gridClassMarket_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void gridClassStore_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void gridDeptGrade_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void gridDeptMarket_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void gridDeptStore_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void groupControl1_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void ClientPanel_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void DepartmentSelector_Validating(object sender, CancelEventArgs e)
+        {
+            if (FormUtils.TagContains(this, "ForceClose"))
+            {
+                e.Cancel = false;
+            }
+        }
+
+
+
+
+
+
         //-----------------------------------------------------------------------------------------
         #endregion
     }

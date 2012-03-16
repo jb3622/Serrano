@@ -139,6 +139,11 @@
   <ItemGroup>
     <Compile Include="BusinessBase.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StoreGroupsCollection.cs" />
     <Compile Include="StowawayStoresInfo.cs" />
     <Compile Include="GiveItBack.cs" />
@@ -158,11 +163,6 @@
     <Compile Include="UserDeptInfo.cs" />
     <Compile Include="WorkbenchManualInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -189,8 +189,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -336,10 +336,10 @@
     <None Include="Resources\SQLStoreGradeUpdate.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\SQLLookupStoresBAM.txt" />
     <Content Include="Resources\SQLStorItemAssignmentDeleteLock.txt" />
     <Content Include="Resources\SQLStorItemAssignmentGetLocks.txt" />
     <Content Include="Resources\SQLStorItemAssignmentLock.txt" />
-    <None Include="Resources\SQLSystemMessagesSelect1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

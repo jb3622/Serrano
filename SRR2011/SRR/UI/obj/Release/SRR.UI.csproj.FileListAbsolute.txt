@@ -388,3 +388,42 @@ C:\Dev\Visual Studio 2010\iDash\branches\devintegration\SRR\UI\obj\Release\Gener
 C:\Dev\Visual Studio 2010\iDash\branches\devintegration\SRR\UI\obj\Release\Disney.iDash.SRR.UI.dll.licenses
 C:\Dev\Visual Studio 2010\iDash\branches\devintegration\SRR\UI\obj\Release\Disney.iDash.SRR.UI.dll
 C:\Dev\Visual Studio 2010\iDash\branches\devintegration\SRR\UI\obj\Release\Disney.iDash.SRR.UI.pdb
+C:\TEMP\xDev\root\SRR2011\bin\Release\LocalData.sdf
+C:\TEMP\xDev\root\SRR2011\bin\Release\Disney.iDash.SRR.UI.dll.config
+C:\TEMP\xDev\root\SRR2011\bin\Release\Disney.iDash.SRR.UI.dll
+C:\TEMP\xDev\root\SRR2011\bin\Release\Disney.iDash.SRR.UI.pdb
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\ResolveAssemblyReference.cache
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.Controls.LookupCheckedComboControl.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.Controls.DepartmentSelectorControl.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.Controls.CriteriaSummaryControl.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.Controls.StockItemControl.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.Controls.LookupComboControl.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.Controls.LookupListBoxControl.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Common.BaseParameters.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Common.BaseForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Common.BaseDataForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Maintenance.StockItemStoreAssignmentForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Maintenance.StockItemStoreAssignmentEditForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Maintenance.DeptStoreGradeForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Maintenance.StoreDeleteScheduleForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Maintenance.StoreGroupsForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Maintenance.StoreLeadTimeForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Maintenance.StockItemMinDisplayQtyForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Maintenance.UserDeptAssignmentForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Workbench.WorkbenchAPPAllocationReleaseForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Workbench.DetailedFocusGroupsForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Workbench.DetailedParametersForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Workbench.DetailedWorkbenchForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Toolbar.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Workbench.GiveItBackConfirmationDialog.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Workbench.ManualAPPAllocationReleaseForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Workbench.StoreClassSelectorDialog.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Workbench.StowawayStoresForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Workbench.SummaryWorkbenchForm.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Forms.Maintenance.WorkbenchExtractDialog.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.Properties.Resources.resources
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\GenerateResource.read.1.tlog
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\GenerateResource.write.1.tlog
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.dll.licenses
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.dll
+C:\TEMP\xDev\root\SRR2011\SRR\UI\obj\Release\Disney.iDash.SRR.UI.pdb

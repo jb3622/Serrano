@@ -245,6 +245,15 @@
     <value>..\Resources\SQLStoreGradeUpdate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="SQLLookupStoresBAM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SQLSystemMessagesSelect1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+    <value>..\Resources\SQLLookupStoresBAM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLStorItemAssignmentDeleteLock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqlstoritemassignmentdeletelock.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLStorItemAssignmentGetLocks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqlstoritemassignmentgetlocks.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="SQLStorItemAssignmentLock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sqlstoritemassignmentlock.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
 </root>

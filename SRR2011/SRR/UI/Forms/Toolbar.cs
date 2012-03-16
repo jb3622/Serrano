@@ -20,8 +20,7 @@ namespace Disney.iDash.SRR.UI.Forms
 			_sysInfo.ExceptionHandler.ExceptionEvent += ((ex, extraInfo, terminateApplication)=>
 				{
 					ErrorDialog.Show(ex, extraInfo, terminateApplication);
-				});
-           
+				});           
         }
 
         private void barSummary_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -67,22 +66,22 @@ namespace Disney.iDash.SRR.UI.Forms
 				IsLoading = true;
 				var frm = (Forms.Workbench.StowawayStoresForm)FormUtils.SelectInstance(new Forms.Workbench.StowawayStoresForm());
 
-				if (frm.SystemLock == null)
-				{
-					var systemLock = _sysInfo.SetSystemLock(rpSRR.Text, e.Item.Caption);
-					if (systemLock.Success)
-					{
-						frm.SystemLock = systemLock;
-						frm.Tag = rpSRR.Text;
-						frm.Setup();
-						frm.ShowForm();
-					}
-					else
-						MessageBox.Show(systemLock.FailureReason, e.Item.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-				}
+                if (frm.SystemLock == null)
+                {
+                    var systemLock = _sysInfo.SetSystemLock(rpSRR.Text, e.Item.Caption);
+
+                    if (systemLock.Success)
+                    {
+                        frm.SystemLock = systemLock;
+                        frm.Tag = rpSRR.Text;
+                        frm.Setup();
+                        frm.ShowForm();
+                    }
+                    else
+                        MessageBox.Show(systemLock.FailureReason, e.Item.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
 				IsLoading = false;
 			}
-
         }
 
         private void barManualAPP_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -139,23 +138,11 @@ namespace Disney.iDash.SRR.UI.Forms
             {
                 IsLoading = true;
 				var frm = (Forms.Maintenance.StockItemStoreAssignmentForm)FormUtils.SelectInstance(new Forms.Maintenance.StockItemStoreAssignmentForm());
-
-				if (frm.SystemLock == null)
-				{
-					var systemLock = _sysInfo.SetSystemLock(rpSRR.Text, e.Item.Caption);
-
-					if (systemLock.Success)
-					{
-						frm.SystemLock = systemLock;
-						frm.Tag = rpSRR.Text;
-						frm.Setup();
-						frm.ShowForm();
-					}
-					else
-						MessageBox.Show(systemLock.FailureReason, e.Item.Caption, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-				}
+                
+				frm.Tag = rpSRR.Text;
+				frm.Setup();
+				frm.ShowForm();
 				IsLoading = false;
-
             }
         }
 

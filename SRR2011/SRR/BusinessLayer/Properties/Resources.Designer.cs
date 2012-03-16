@@ -92,30 +92,11 @@ namespace Disney.iDash.SRR.BusinessLayer.Properties {
         ///.
         /// </summary>
         internal static string SQLDeptGradeStoresSelect {
-            get{
+            get {
                 return ResourceManager.GetString("SQLDeptGradeStoresSelect", resourceCulture);
             }
         }
-
-        internal static string SQLStorItemAssignmentDeleteLock {
-            get{
-                return ResourceManager.GetString("SQLStorItemAssignmentDeleteLock", resourceCulture);
-            }
-        }
-
-        internal static string SQLStorItemAssignmentGetLocks {
-            get{
-                return ResourceManager.GetString("SQLStorItemAssignmentGetLocks", resourceCulture);
-            }
-        }
-
-        internal static string SQLStorItemAssignmentLock{
-            get{
-                return ResourceManager.GetString("SQLStorItemAssignmentLock", resourceCulture);
-            }
-        }
-
-
+        
         /// <summary>
         ///   Looks up a localized string similar to SELECT
         ///	&lt;item&gt; AS ITEM,
@@ -276,13 +257,7 @@ namespace Disney.iDash.SRR.BusinessLayer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT 
-        ///	FMCode as Id,
-        ///	TRIM(FMDesc) || &apos; (&apos; || Trim(FMCode) || &apos;)&apos; as Description
-        ///FROM 
-        ///	DSFAMLY 
-        ///ORDER BY 
-        ///	FMCode.
+        ///   Looks up a localized string similar to SELECT         ///	FMCode as Id,        ///	TRIM(FMDesc) || &apos; (&apos; || Trim(FMCode) || &apos;)&apos; as Description        ///FROM         ///	DSFAMLY         ///ORDER BY         ///	FMCode.
         /// </summary>
         internal static string SQLLookupFranchises {
             get {
@@ -454,31 +429,15 @@ namespace Disney.iDash.SRR.BusinessLayer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT 
-        ///	MGKEY as MessageId,
-        ///	MGSYSN as SystemTag,
-        ///	MGUSER as NetworkId,
-        ///	MGSTRT as StartTime,
-        ///	MGENDT as EndTime,
-        ///	MGMON as Mon,
-        ///	MGTUE as Tue,
-        ///	MGWED as Wed,
-        ///	MGTHU as Thu,
-        ///	MGFRI as Fri,
-        ///	MGSAT as Sat,
-        ///	MGSUN as Sun,
-        ///	MGMSG as Message,
-        ///	MGSTS as Active,
-        ///	MGTRM as Terminate
-        ///FROM 
-        ///	DSSRSMSG
-        ///
-        ///WHERE
-        ///	MGSTS = &apos;1&apos;
-        ///	AND (MGUSER = &apos;*ALL&apos; OR MGUSER = &apos;&lt;networkId&gt;&apos;)
-        ///	AND (MGSYSN = &apos;*ALL&apos; OR MGSYSN in (&apos;&lt;systemTags&gt;&apos;))
-        ///	AND (MGSTRT=0 OR &lt;time&gt; BETWEEN MGSTRT AND MGENDT)
-        ///	AND SUBSTR(MGSUN ||  [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SELECT DISTINCT SGSTR as Id,                               
+        ///       TRIM(SGSNAM) || &apos; (&apos; || SGSTR || &apos;)&apos; As Description 
+        ///  FROM DSSRMSG3                                            
+        /// WHERE SGSTR not in ( SELECT CAST(CONVAL3 AS DECIMAL(3,0))  
+        ///                        FROM DSCONSP                        
+        ///                        WHERE CONKEY1 = &apos;INTERNET STORE&apos;     
+        ///                          AND CONKEY3 = &apos; &apos; )                
+        ///ORDER BY SGSTR                                             
+        ///.
         /// </summary>
         internal static string SQLLookupStoresBAM {
             get {
@@ -738,21 +697,7 @@ namespace Disney.iDash.SRR.BusinessLayer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT
-        ///	SDLSTS as Status,
-        ///	SDLSTR as StoreId,
-        ///	SDLDDAT as ScheduleDate,
-        ///	SDLUSR as NetworkId,
-        ///	SDLRDAT as LastUpdated,
-        ///	0 As DELETEFLAG,
-        ///	SDLSTR as OldStoreId
-        ///FROM
-        ///	DSSRSTD1
-        ///WHERE 
-        ///	SDLSTS IN (&lt;statusList&gt;)
-        ///ORDER BY
-        ///	SDLSTS,
-        ///	SDLDDAT.
+        ///   Looks up a localized string similar to SELECT        ///	SDLSTS as Status,        ///	SDLSTR as StoreId,        ///	SDLDDAT as ScheduleDate,        ///	SDLUSR as NetworkId,        ///	SDLRDAT as LastUpdated,        ///	0 As DELETEFLAG,        ///	SDLSTR as OldStoreId        ///FROM        ///	DSSRSTD1        ///WHERE         ///	SDLSTS IN (&lt;statusList&gt;)        ///ORDER BY        ///	SDLSTS,        ///	SDLDDAT.
         /// </summary>
         internal static string SQLStoreDeleteScheduleSelect {
             get {
@@ -832,6 +777,60 @@ namespace Disney.iDash.SRR.BusinessLayer.Properties {
         internal static string SQLStoreLeadTimesUpdate {
             get {
                 return ResourceManager.GetString("SQLStoreLeadTimesUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DELETE FROM
+        ///    DSSRLCK
+        ///WHERE
+        ///    LOUSR = &apos;&lt;username&gt;&apos;
+        ///AND
+        ///    LODEPT = &lt;dept&gt;
+        ///AND
+        ///    LOMBR = &apos;ISA&apos;
+        ///AND 
+        ///    LOGUID = &apos;&lt;guid&gt;&apos;
+        ///
+        ///.
+        /// </summary>
+        internal static string SQLStorItemAssignmentDeleteLock {
+            get {
+                return ResourceManager.GetString("SQLStorItemAssignmentDeleteLock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT 
+        ///	LODEPT as DeptId,
+        ///	LOUSR AS UserName,
+        ///	LOGUID AS LockId
+        ///FROM
+        ///	DSSRLCK
+        ///WHERE 
+        ///	LODEPT = &lt;dept&gt;
+        ///AND LOMBR=&apos;ISA&apos;
+        ///.
+        /// </summary>
+        internal static string SQLStorItemAssignmentGetLocks {
+            get {
+                return ResourceManager.GetString("SQLStorItemAssignmentGetLocks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO 
+        ///    DSSRLCK (LOKEY,LODEPT,LOCLS,LOVEN,LOSTY,LOSTR,LOUSR,LOMBR,LOTYP,LOMOD,LOGUID)
+        ///VALUES
+        ///    (16,&lt;dept&gt;,0,0,0,0,&apos;&lt;username&gt;&apos;,&apos;ISA&apos;,&apos;&apos;,&apos;A&apos;,
+        ///	&apos;&lt;guid&gt;&apos;)
+        ///
+        ///
+        ///.
+        /// </summary>
+        internal static string SQLStorItemAssignmentLock {
+            get {
+                return ResourceManager.GetString("SQLStorItemAssignmentLock", resourceCulture);
             }
         }
         

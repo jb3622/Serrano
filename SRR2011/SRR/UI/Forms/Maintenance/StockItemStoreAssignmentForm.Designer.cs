@@ -320,6 +320,7 @@ namespace Disney.iDash.SRR.UI.Forms.Maintenance
             this.gridItems.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.viewItems});
             this.gridItems.Visible = false;
+            this.gridItems.Validating += new System.ComponentModel.CancelEventHandler(this.gridItems_Validating);
             // 
             // viewItems
             // 
