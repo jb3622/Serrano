@@ -1,0 +1,4 @@
+INSERT INTO DSSRCTRL 
+     (USERNAME, PCNAME, SOFTWAREVERSION, LASTACTIVITY, ACTIVITYDESCRIPTION, ACTIVITYDETAIL)
+VALUES
+     ('<UserName>', '<PCName>', '<SoftwareVersion>', '<LastActivity>', '<ActivityDescription>', '<ActivityDetail>')      

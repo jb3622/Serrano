@@ -1,0 +1,10 @@
+UPDATE 
+   DSSRCTRL 
+SET 
+   PCNAME = '<PCName>',              
+   SoftwareVersion = '<SoftwareVersion>',
+   LASTACTIVITY = '<LastActivity>', 
+   ACTIVITYDESCRIPTION = '<ActivityDescription>', 
+   ACTIVITYDETAIL = '<ActivityDetail>'
+WHERE 
+   UserName = '<UserName>'

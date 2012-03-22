@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
-  <asmv1:assemblyIdentity version="2.18.3.52" name="iDash.exe" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity version="2.18.3.56" name="iDash.exe" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="Disney.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -206,7 +206,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>s1e6RrK34fDblfDCoETfvURD52w=</dsig:DigestValue>
+        <dsig:DigestValue>ros16mEwA3rpSxrishhXZQx9I88=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -218,19 +218,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>8TK2UvGQfQy9PNdmakE/ExyxuEE=</dsig:DigestValue>
+        <dsig:DigestValue>V1znAepOKy/ZoZC+65rmnEIvcUM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Disney.iDash.Framework.dll" size="2136576">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Disney.iDash.Framework.dll" size="2139648">
       <assemblyIdentity name="Disney.iDash.Framework" version="2.16.1109.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>A/cW8lTv8OwWXeXyArS+dzQQwfY=</dsig:DigestValue>
+        <dsig:DigestValue>Zu9nGGFvYkNgjh/pc/RFJjlamYg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -242,7 +242,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>zEI3msDnsafFuqmjZ+hRRdU2708=</dsig:DigestValue>
+        <dsig:DigestValue>/IXEB4WQkKjgKOf+YpUkrslMhIw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -254,7 +254,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>uBjM44GklztjvVRp0PCi1e8wpiE=</dsig:DigestValue>
+        <dsig:DigestValue>KykG9EaYV0trj+GU2fKlSeBQNgA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -266,19 +266,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>WogniUXU2uuNYeWNoTF0Enki9YU=</dsig:DigestValue>
+        <dsig:DigestValue>eI2woDjPLKQ7DEkgnG7Zn+Y8q/s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Disney.iDash.SRR.UI.dll" size="630272">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Disney.iDash.SRR.UI.dll" size="632320">
       <assemblyIdentity name="Disney.iDash.SRR.UI" version="2.16.1109.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>brWiSBl2g6iwiimR4JaT0VQDUbU=</dsig:DigestValue>
+        <dsig:DigestValue>2IFky54xMaffpfLc1aMVun4Mdxc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -290,7 +290,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>v1F+e9W4eNQ5T/iekBID218wx1w=</dsig:DigestValue>
+        <dsig:DigestValue>zbfTzSEouR2rVevwQYdwNWRHJ50=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

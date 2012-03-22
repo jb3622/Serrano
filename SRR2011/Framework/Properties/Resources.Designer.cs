@@ -75,6 +75,17 @@ namespace Disney.iDash.Framework.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SELECT * FROM DSSRCTRL
+        ///WHERE 
+        ///   Username = &apos;&lt;UserName&gt;&apos;.
+        /// </summary>
+        public static string SQLCheckControlLog {
+            get {
+                return ResourceManager.GetString("SQLCheckControlLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DELETE 
         ///	FROM DSSRLCK
         ///WHERE 
@@ -95,6 +106,36 @@ namespace Disney.iDash.Framework.Properties {
         public static string SQLDeleteUserLocks2 {
             get {
                 return ResourceManager.GetString("SQLDeleteUserLocks2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to INSERT INTO DSSRCONTROL 
+        ///     (USERNAME, PCNAME, SOFTWAREVERSION, LASTACTIVITY, ACTIVITYDESCRIPTION, ACTIVITYDETAIL)
+        ///VALUES
+        ///     (&apos;&lt;UserName&gt;&apos;, &apos;&lt;PCName&gt;&apos;, &apos;&lt;SoftwareVersion&gt;&apos;, &apos;&lt;LastActivity&gt;&apos;, &apos;&lt;ActivityDescription&gt;&apos;, &apos;&lt;ActivityDetail&gt;&apos;)      .
+        /// </summary>
+        public static string SQLInsertControlLog {
+            get {
+                return ResourceManager.GetString("SQLInsertControlLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UPDATE 
+        ///   DSSRCONTROL 
+        ///SET 
+        ///   PCNAME = &apos;&lt;PCName&gt;&apos;,              
+        ///   SoftwareVersion = &apos;&lt;SoftwareVersion&gt;&apos;,
+        ///   LASTACTIVITY = &apos;&lt;LastActivity&gt;&apos;, 
+        ///   ACTIVITYDESCRIPTION = &apos;&lt;ActivityDescription&gt;&apos;, 
+        ///   ACTIVITYDETAIL = &apos;&lt;ActivityDetail&gt;&apos;
+        ///WHERE 
+        ///   UserName = &apos;&lt;UserName&gt;&apos;.
+        /// </summary>
+        public static string SQLUpdateControlLog {
+            get {
+                return ResourceManager.GetString("SQLUpdateControlLog", resourceCulture);
             }
         }
     }

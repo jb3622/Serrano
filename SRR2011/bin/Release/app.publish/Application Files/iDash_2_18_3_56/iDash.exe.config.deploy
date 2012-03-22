@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="Disney.iDash.Startup.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+            <section name="Disney.iDash.Framework.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+            <section name="Disney.iDash.SRR.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+            <section name="Disney.iDash.DataLayer.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+            <section name="Disney.iDash.Shared.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <connectionStrings>
+      <add name="LocalDataEntities" connectionString="metadata=res://*/LocalDataModel.csdl|res://*/LocalDataModel.ssdl|res://*/LocalDataModel.msl;provider=System.Data.SqlServerCe.4.0;provider connection string=&quot;Data Source=|DataDirectory|\LocalData.sdf&quot;"
+        providerName="System.Data.EntityClient" />
+    </connectionStrings>
+    <applicationSettings>    
+        <Disney.iDash.Startup.Properties.Settings>
+            <setting name="DemonInterval" serializeAs="String">
+                <value>60</value>
+            </setting>
+            <setting name="LocalDataFilename" serializeAs="String">
+                <value>LocalData.sdf</value>
+            </setting>
+            <setting name="LocalDataPath" serializeAs="String">
+                <value>C:\TEMP\xDev\root\SRR2011\LocalData\</value>
+            </setting>
+            <setting name="LocalDataFileVersionRequired" serializeAs="String">
+                <value>2</value>
+            </setting>
+        </Disney.iDash.Startup.Properties.Settings>
+        <Disney.iDash.Framework.Properties.Settings>
+          <setting name="IdleTimeout" serializeAs="String">
+            <value>900</value>
+          </setting>
+        </Disney.iDash.Framework.Properties.Settings>
+        <Disney.iDash.SRR.Properties.Settings>
+          <setting name="EditableColumnBackcolor" serializeAs="String">
+            <value>LightYellow</value>
+          </setting>
+          <setting name="OddRowBackColor" serializeAs="String">
+            <value>White</value>
+          </setting>
+          <setting name="EvenRowBackColor" serializeAs="String">
+            <value>LightCyan</value>
+          </setting>
+          <setting name="ChangedCellForeColor" serializeAs="String">
+            <value>Red</value>
+          </setting>
+          <setting name="InheritedCellForeColor" serializeAs="String">
+            <value>Blue</value>
+          </setting>
+          <setting name="FocusedRowBackColor" serializeAs="String">
+            <value>LimeGreen</value>
+          </setting>
+          <setting name="SelectedRowBackColor" serializeAs="String">
+            <value>Red</value>
+          </setting>
+          <setting name="SelectedRowForeColor" serializeAs="String">
+            <value>White</value>
+          </setting>
+        </Disney.iDash.SRR.Properties.Settings>    
+        <Disney.iDash.DataLayer.Properties.Settings>
+          <setting name="CommandTimeout" serializeAs="String">
+            <value>300</value>
+          </setting>
+          <setting name="LogSQL" serializeAs="String">
+            <value>True</value>
+          </setting>
+          <setting name="DefaultWrapper" serializeAs="String">
+            <value>DSIPWRAP</value>
+          </setting>
+          <setting name="DefaultJobQueue" serializeAs="String">
+            <value>QGPL/QTXTSRCH</value>
+          </setting>
+        </Disney.iDash.DataLayer.Properties.Settings>
+        <Disney.iDash.Shared.Properties.Settings>
+          <setting name="HelpDeskEmail" serializeAs="String">
+            <value>mark.d.wilson.-nd@disney.com</value>
+          </setting>
+        </Disney.iDash.Shared.Properties.Settings>
+    </applicationSettings>
+</configuration>

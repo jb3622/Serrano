@@ -68,8 +68,8 @@ namespace Disney.iDash.Framework.Forms
 
 			if (validUser)
 			{
-
                 ClearLocks(txtNetworkId.Text);
+                UpdateControlLog(txtNetworkId.Text);
                 Session.User = _entities.eUsers.Where((u) => (u.NetworkId.ToLower() == txtNetworkId.Text.ToLower())).FirstOrDefault();
 				if (Session.User != null && Session.User.Active.HasValue && Session.User.Active.Value)
 				{
@@ -106,6 +106,95 @@ namespace Disney.iDash.Framework.Forms
                 this.DialogResult = DialogResult.Cancel;
                 this.Close();
             }      
+        }
+
+        /// <summary>
+        /// This function updates the control log.
+        /// </summary>
+        /// <param name="loginId"></param>
+        /// <returns></returns>
+        protected bool UpdateControlLog(string loginId)
+        {
+            bool result = false;
+            string strSQL = "";
+            string pcName = System.Environment.MachineName;
+            string softwareVersion = "";            
+            string activityDescription = "";
+            string activityDetail = "";
+            string datePatt = @"M/d/yyyy hh:mm:ss tt";
+            string lastActivity = DateTime.UtcNow.ToString(datePatt);
+
+
+            if (_factory.OpenConnection())
+            {
+                try
+                {
+                    strSQL = Properties.Resources.SQLCheckControlLog.Replace("<UserName>", loginId.ToUpper());
+                    System.Data.DataTable tbl  = _factory.CreateTable(strSQL);
+
+                    if (tbl.Rows.Count > 0)
+                    {
+                        // user record exists - update
+                        pcName = System.Environment.MachineName;
+                        softwareVersion = "";
+                        if (ApplicationDeployment.IsNetworkDeployed)
+                        {
+                            softwareVersion = ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString(4);
+                        }
+                        else
+                        {
+                            softwareVersion = Assembly.GetEntryAssembly().GetName().Version.ToString();
+                        }
+
+                        activityDescription = "Logged Into SRR";
+                        activityDetail = "Logged Into SRR";
+
+                        strSQL = Properties.Resources.SQLUpdateControlLog.Replace("<UserName>", loginId.ToUpper()).Replace("<PCName>", pcName);
+                        strSQL = strSQL.Replace("<SoftwareVersion>", softwareVersion);
+                        strSQL = strSQL.Replace("<LastActivity>", lastActivity);
+                        strSQL = strSQL.Replace("<ActivityDescription>", activityDescription);
+                        strSQL = strSQL.Replace("<ActivityDetail>", activityDetail);
+                        var cmdUpdate = _factory.CreateCommand(strSQL);
+                        cmdUpdate.ExecuteNonQuery();
+
+                    }
+                    else
+                    {
+                        // insert user's first record
+                        pcName = System.Environment.MachineName; // "SW-GBHA-TDSD293";
+                        softwareVersion = "";
+                        if (ApplicationDeployment.IsNetworkDeployed)
+                        {
+                            softwareVersion = ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString(4);
+                        }
+                        else
+                        {
+                            softwareVersion = Assembly.GetEntryAssembly().GetName().Version.ToString();
+                        }
+                        
+                        activityDescription = "Logged Into SRR";
+                        activityDetail = "Logged Into SRR";
+
+                        strSQL = Properties.Resources.SQLInsertControlLog.Replace("<UserName>", loginId.ToUpper()).Replace("<PCName>", pcName);
+                        strSQL = strSQL.Replace("<SoftwareVersion>", softwareVersion);
+                        strSQL = strSQL.Replace("<LastActivity>", lastActivity);
+                        strSQL = strSQL.Replace("<ActivityDescription>", activityDescription);
+                        strSQL = strSQL.Replace("<ActivityDetail>", activityDetail);
+                        var cmdInsert = _factory.CreateCommand(strSQL);
+                        cmdInsert.ExecuteNonQuery();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                finally
+                {
+                    _factory.CloseConnection();
+                }
+            }
+            return (result);
         }
 
         /// <summary>
