@@ -1,4 +1,4 @@
 INSERT INTO DSSRCTRL 
-     (USERNAME, PCNAME, SOFTWAREVERSION, LASTACTIVITY, ACTIVITYDESCRIPTION, ACTIVITYDETAIL)
+     (CTLUSERID, CTLPCNAME, CTLVERNO, CTLLACTV, CTLACTDSC, CTLACTDTL)
 VALUES
      ('<UserName>', '<PCName>', '<SoftwareVersion>', '<LastActivity>', '<ActivityDescription>', '<ActivityDetail>')      

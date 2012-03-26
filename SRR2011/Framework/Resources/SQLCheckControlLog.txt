@@ -1,3 +1,5 @@
 SELECT * FROM DSSRCTRL
 WHERE 
-   Username = '<UserName>'
+   CTLUSERID = '<UserName>'
+AND 
+   CTLPCNAME = '<PCName>'

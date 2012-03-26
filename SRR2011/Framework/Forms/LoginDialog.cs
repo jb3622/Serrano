@@ -130,6 +130,7 @@ namespace Disney.iDash.Framework.Forms
                 try
                 {
                     strSQL = Properties.Resources.SQLCheckControlLog.Replace("<UserName>", loginId.ToUpper());
+                    strSQL = strSQL.Replace("<PCName>",pcName);
                     System.Data.DataTable tbl  = _factory.CreateTable(strSQL);
 
                     if (tbl.Rows.Count > 0)

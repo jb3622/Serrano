@@ -1,10 +1,11 @@
 UPDATE 
    DSSRCTRL 
-SET 
-   PCNAME = '<PCName>',              
-   SoftwareVersion = '<SoftwareVersion>',
-   LASTACTIVITY = '<LastActivity>', 
-   ACTIVITYDESCRIPTION = '<ActivityDescription>', 
-   ACTIVITYDETAIL = '<ActivityDetail>'
+SET     
+   CTLVERNO = '<SoftwareVersion>',
+   CTLLACTV = '<LastActivity>', 
+   CTLACTDSC = '<ActivityDescription>', 
+   CTLACTDTL = '<ActivityDetail>'
 WHERE 
-   UserName = '<UserName>'
+   CTLUSERID = '<UserName>'
+AND 
+   CTLPCNAME = '<PCName>'
